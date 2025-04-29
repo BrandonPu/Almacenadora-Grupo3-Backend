@@ -15,7 +15,11 @@ const SupplierSchema = Schema({
         type: String,
         required: [true, 'Email required'],
         unique: true
-    }
+    },
+    state: {
+        type: Boolean,
+        default: true
+    } 
 },
 {
     timestamps: true,

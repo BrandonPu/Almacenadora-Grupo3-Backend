@@ -37,14 +37,6 @@ export const addCategory = async (req, res) => {
         
         const { nameCategory, description} = req.body; 
 
-        const existingCategory = await Category.findOne({ nameCategory: nameCategory.trim() });
-        if (existingCategory) {
-            return res.status(400).json({
-                success: false,
-                msg: 'Category already exists'
-            });
-        }
-
         const category = new Category({
             nameCategory: nameCategory.trim(),
             description: description

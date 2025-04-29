@@ -1,7 +1,7 @@
 import { response } from "express";
 import Product from './product.model.js';
 import Category from '../categories/category.model.js';
-import Supplier from '../supplier/spplier.model.js';
+import Supplier from '../supplier/supplier.model.js';
 
 export const addProduct = async (req, res) => {
     try {

@@ -11,6 +11,9 @@ import  { dbConnection } from './mongo.js';
 
 import authRoutes from '../src/auth/auth.routes.js';
 import productRoutes from '../src/products/product.routes.js';
+import categoryRoutes from '../src/categories/category.routes.js';
+import supplierRoutes from '../src/supplier/supplier.routes.js';
+
 
 
 const middlewares = (app) => {
@@ -25,6 +28,8 @@ const middlewares = (app) => {
 const routes = (app) => {
     app.use('/almacenadora/v1/auth', authRoutes);
     app.use('/almacenadora/v1/products', productRoutes);
+    app.use('/almacenadora/v1/categories', categoryRoutes);
+    app.use('/almacenadora/v1/suppliers', supplierRoutes);
 };
 
 export const conetarDB = async() => {

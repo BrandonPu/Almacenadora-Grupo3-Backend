@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "681079f7baf3e445c978380d"
+  },
+  "nameSupplier": "Peralta",
+  "productSupplier": "gemas de braulio",
+  "emailSupplier": "peralta@gmail.com",
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-29T07:04:23.277Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T07:04:37.308Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68107a9a38418502cc8b3817"
+  },
+  "nameSupplier": "Joakin",
+  "productSupplier": "elotes",
+  "emailSupplier": "joaki@gmail.com",
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-29T07:07:06.345Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T07:07:21.297Z"
+  }
+}]

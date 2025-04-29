@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "a73d5db0-f246-432e-be1f-23bcae6947fd",
+		"name": "Almacenadora",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37413747"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"kreyes@gmail.com\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Cristian\",\r\n  \"surname\": \"Rosas\",\r\n  \"username\": \"crosas\",\r\n  \"email\": \"crosas@gmail.com\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/auth/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Supplier",
+			"item": [
+				{
+					"name": "AgregarProveedor",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNmYxNWNjNDcyNDViYjVmMTUxNzkiLCJpYXQiOjE3NDU5MDk0MzEsImV4cCI6MTc0NTkxMzAzMX0.cnbIYs1AIzfMTBBTtVz77swRAGsR5wFtZiAiSQ0lXw0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nameSupplier\" : \"Jonathan\",\r\n    \"productSupplier\": \"Comida Enlatada\",\r\n    \"emailSupplier\" : \"jonas@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/suppliers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"suppliers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ObtenerProveedores",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNmYxNWNjNDcyNDViYjVmMTUxNzkiLCJpYXQiOjE3NDU5MDk0MzEsImV4cCI6MTc0NTkxMzAzMX0.cnbIYs1AIzfMTBBTtVz77swRAGsR5wFtZiAiSQ0lXw0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/suppliers/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"suppliers",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ActualizarProveedor",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNmYxNWNjNDcyNDViYjVmMTUxNzkiLCJpYXQiOjE3NDU5MDk4MDYsImV4cCI6MTc0NTkxMzQwNn0.BBvnghPu8xz2uton2z0jzf5q5PuZiDyZeBlzSc7R_g8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nameSupplier\": \"Joakin\",\r\n  \"productSupplier\": \"elotes\",\r\n  \"emailSupplier\": \"joaki@gmail.com\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/suppliers/68107a9a38418502cc8b3817",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"suppliers",
+								"68107a9a38418502cc8b3817"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EliminarProveedor",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNmYxNWNjNDcyNDViYjVmMTUxNzkiLCJpYXQiOjE3NDU5MDk4MDYsImV4cCI6MTc0NTkxMzQwNn0.BBvnghPu8xz2uton2z0jzf5q5PuZiDyZeBlzSc7R_g8",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/suppliers/681079f7baf3e445c978380d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"suppliers",
+								"681079f7baf3e445c978380d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
