@@ -19,7 +19,7 @@ const ProductSchema = Schema({
     keeperCategory: {
         type: Schema.Types.ObjectId,
         ref: 'Category',
-        //required: [true, 'Category required']
+        required: [true, 'Category required']
     },
     keeperSupplier : {
         type: Schema.Types.ObjectId,

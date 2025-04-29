@@ -15,7 +15,12 @@ const SupplierSchema = Schema({
         type: String,
         required: [true, 'Email required'],
         unique: true
-    }
+    },
+    keeperProduct: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Product',
+        required: false
+    }],
 },
 {
     timestamps: true,

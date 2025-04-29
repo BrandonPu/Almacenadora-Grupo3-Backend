@@ -3,6 +3,8 @@ import Product from './product.model.js';
 import Category from '../categories/category.model.js';
 import Supplier from '../supplier/supplier.model.js';
 
+import EntryAndExitHistory from "./entryAndExitHistory.model.js";
+
 export const addProduct = async (req, res) => {
     try {
         
@@ -132,6 +134,66 @@ export const updateProduct = async (req, res  = response) => {
         res.status(500).json({
             succes: false,
             msj: "Error updating product",
+            error: error.message
+        })
+    }
+};
+
+export const productEntryRegistration = async (req, res  = response) => {
+    try {
+        const {id} = req.params;
+        const {_id, ...data} = req.body;
+        data.state = true;
+
+        const userId = req.usuario._id;
+
+        const product = await Product.findByIdAndUpdate(id, data, { new: true });
+
+        const history = new EntryAndExitHistory({
+            keeperUser: userId,
+            modify: [data], 
+            state: true, 
+        });
+
+        await history.save();
+
+        res.status(200).json({
+            succes: true,
+            msj: 'Product updated successfully',
+            product
+        })
+
+    } catch (error) {
+        res.status(500).json({
+            succes: false,
+            msj: "Error updating product",
+            error: error.message
+        })
+    }
+};
+
+export const historyProductView = async (req, res) => {
+    const {limite = 100, desde = 0} = req.query;
+    const query = {state: true};
+
+    try {
+        
+        const productHistoryEntry = await EntryAndExitHistory.find(query)
+            .populate({path: 'keeperUser', match: {state:true}, select: 'name'})
+            .skip(Number(desde))
+            .limit(Number(limite));
+
+        const total = await EntryAndExitHistory.countDocuments(query);
+
+        res.status(200).json({
+            succes: true,
+            total,
+            productHistoryEntry
+        })
+    } catch (error) {
+        res.status(500).json({
+            succes: false,
+            msg: 'Error getting categories',
             error: error.message
         })
     }
