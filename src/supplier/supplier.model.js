@@ -16,6 +16,11 @@ const SupplierSchema = Schema({
         required: [true, 'Email required'],
         unique: true
     },
+    keeperProduct: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Product',
+        required: false
+    }],
     state: {
         type: Boolean,
         default: true

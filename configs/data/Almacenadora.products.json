@@ -1,0 +1,132 @@
+[{
+  "_id": {
+    "$oid": "681060636762e7ad0af1e97c"
+  },
+  "nameProduct": "COCA-COLA",
+  "description": "Bebida gaseosa",
+  "stock": 14,
+  "price": 10.5,
+  "entryDate": {
+    "$date": "2018-01-10T00:00:00.000Z"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-29T05:15:15.010Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T06:39:39.220Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68106b9fc8beb5c7a23cee10"
+  },
+  "nameProduct": "Pepsi",
+  "description": "bebida gaseosa",
+  "stock": 10,
+  "price": 9,
+  "entryDate": {
+    "$date": "2018-01-11T00:00:00.000Z"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-29T06:03:11.252Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T06:03:11.252Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681077246a6393b97ff741b4"
+  },
+  "nameProduct": "Tiki",
+  "description": "bebida gaseosa",
+  "stock": 10,
+  "keeperCategory": {
+    "$oid": "681076df6a6393b97ff741b0"
+  },
+  "price": 5,
+  "entryDate": {
+    "$date": "2018-01-11T00:00:00.000Z"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-29T06:52:20.086Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T06:52:20.086Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68114822e80d722f2b05b395"
+  },
+  "nameProduct": "seven up",
+  "description": "bebida gaseosa",
+  "stock": 8,
+  "keeperCategory": {
+    "$oid": "681079f7baf3e445c978380d"
+  },
+  "price": 8,
+  "entryDate": {
+    "$date": "2020-10-15T06:00:00.000Z"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-29T21:44:02.554Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T21:44:02.554Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681148acdfaa550d1d58dd2b"
+  },
+  "nameProduct": "Chorro - Cola",
+  "description": "bebida gaseosa",
+  "stock": 8,
+  "keeperCategory": {
+    "$oid": "681076df6a6393b97ff741b0"
+  },
+  "keeperSupplier": {
+    "$oid": "681079f7baf3e445c978380d"
+  },
+  "price": 8,
+  "entryDate": {
+    "$date": "2020-10-15T06:00:00.000Z"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-29T21:46:20.843Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T21:46:20.843Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6811506bdd97d2b44b189205"
+  },
+  "nameProduct": "Melocotones",
+  "description": "melocotones en miel",
+  "stock": 11,
+  "keeperCategory": {
+    "$oid": "68115044dd97d2b44b1891f7"
+  },
+  "keeperSupplier": {
+    "$oid": "68107a9a38418502cc8b3817"
+  },
+  "price": 8,
+  "entryDate": {
+    "$date": "2020-10-15T06:00:00.000Z"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-29T22:19:23.242Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T22:19:23.242Z"
+  }
+}]

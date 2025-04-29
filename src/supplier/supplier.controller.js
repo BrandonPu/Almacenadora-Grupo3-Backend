@@ -8,6 +8,9 @@ export const addSupplier = async (req, res = response) => {
         const { nameSupplier, productSupplier, emailSupplier } = req.body;
 
         const exist = await Supplier.findOne({ emailSupplier: emailSupplier.trim() });
+
+        const Supplier = await Category.findOne({nameSupplier: data.nameSupplier});
+        
         if (exist) {
             return res.status(400).json({
                 success: false,

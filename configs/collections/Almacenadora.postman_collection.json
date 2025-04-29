@@ -206,6 +206,32 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "AgergarProducto",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categorias",
+			"item": [
+				{
+					"name": "AgregarCategoria",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }

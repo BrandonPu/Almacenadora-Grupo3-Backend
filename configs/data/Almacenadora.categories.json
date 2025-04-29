@@ -1,0 +1,74 @@
+[{
+  "_id": {
+    "$oid": "681075bc34a881de343031c7"
+  },
+  "nameCategory": "GlobalCategory",
+  "description": "Aqui se encuentran todos los productos sin categoria definida.",
+  "keeperProduct": [],
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-29T06:46:20.076Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T06:46:20.076Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681076df6a6393b97ff741b0"
+  },
+  "nameCategory": "Bebidas",
+  "description": "Apartado para colocar cualquier tipoo de bebida sin alcohol",
+  "keeperProduct": [
+    {
+      "$oid": "681077246a6393b97ff741b4"
+    },
+    {
+      "$oid": "68114822e80d722f2b05b395"
+    },
+    {
+      "$oid": "681148acdfaa550d1d58dd2b"
+    }
+  ],
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-29T06:51:11.835Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T21:46:20.852Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681078faf62b2518b9e51aea"
+  },
+  "nameCategory": "Alimentos enlatados",
+  "description": "Apartado apra colocar cualquier tipo de alimentos enlatados",
+  "keeperProduct": [],
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-29T07:00:10.886Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T07:05:03.797Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68115044dd97d2b44b1891f7"
+  },
+  "nameCategory": "frutas",
+  "description": "apartado para subir cualquier tipo de frutas",
+  "keeperProduct": [
+    {
+      "$oid": "6811506bdd97d2b44b189205"
+    }
+  ],
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-29T22:18:44.718Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-29T22:19:23.244Z"
+  }
+}]
