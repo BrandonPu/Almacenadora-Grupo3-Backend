@@ -39,3 +39,27 @@ export const validateUserExistsEmail = async (req, res, next) => {
         });
     }
 };
+
+export const validateExistingUser = async (req, res, next) => {
+    const {email} = req.body;
+
+    try {
+
+        const existingUser = await User.findOne({ email: email.trim() });
+        if (existingUser) {
+            return res.status(400).json({
+                success: false,
+                msg: 'Email already exists'
+            });
+        }
+
+        next(); 
+
+    } catch (error) {
+        console.log(error);
+        return res.status(500).json({
+            msg: 'Server error during user validation',
+            error: error.message
+        });
+    }
+}

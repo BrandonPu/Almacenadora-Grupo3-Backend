@@ -28,23 +28,15 @@ export const login = async(req, res) => {
 
 export const register = async (req, res) => {
     try {
-        const { email, ...data} = req.body; 
+        const data = req.body; 
 
-        const existingUser = await User.findOne({ email: email.trim() });
-        if (existingUser) {
-            return res.status(400).json({
-                success: false,
-                msg: 'Email already exists'
-            });
-        }
-        
         const encryptedPassword = await hash(data.password);
 
         const user = await User.create({
             name: data.name,
             surname: data.surname,
             username: data.username,
-            email: email.trim(), 
+            email: data.email.trim(), 
             password: encryptedPassword
         })
 
@@ -69,15 +61,15 @@ export const register = async (req, res) => {
 const createUserAdmin = async ( name, surname, username, email, password, role ) => {
     try {
 
-    if (role === "ADMIN_ROLE") {
-        const existAdmin = await User.findOne({ role: "ADMIN_ROLE" });
-        if (existAdmin) {
-            console.log("--------------------------- Error -------------------------------")
-            console.log("A user with admin role already exists. Another cannot be created.");
-            console.log("-----------------------------------------------------------------")
-            return null;
+        if (role === "ADMIN_ROLE") {
+            const existAdmin = await User.findOne({ role: "ADMIN_ROLE" });
+            if (existAdmin) {
+                console.log("--------------------------- Error -------------------------------")
+                console.log("A user with admin role already exists. Another cannot be created.");
+                console.log("-----------------------------------------------------------------")
+                return null;
+            };
         };
-    };
 
     const encryptedPassword = await hash(password);
 

@@ -10,6 +10,7 @@ import limiter from '../src/middlewares/validar-cant-peticiones.js'
 import  { dbConnection } from './mongo.js';
 
 import authRoutes from '../src/auth/auth.routes.js';
+import productRoutes from '../src/products/product.routes.js';
 
 
 const middlewares = (app) => {
@@ -23,6 +24,7 @@ const middlewares = (app) => {
 
 const routes = (app) => {
     app.use('/almacenadora/v1/auth', authRoutes);
+    app.use('/almacenadora/v1/products', productRoutes);
 };
 
 export const conetarDB = async() => {
