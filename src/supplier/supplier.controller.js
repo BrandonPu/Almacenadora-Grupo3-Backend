@@ -41,12 +41,13 @@ export const supplierView = async (req, res = response) => {
         const { limite = 10, desde = 0 } = req.query;
         const query = { state: true };
 
-        const suppliers = await Supplier.find(filter)
+        const suppliers = await Supplier.find(query)
+
             .populate({path: 'keeperProduct', match: {state:true}, select: 'nameProduct'})
             .skip(Number(desde))
             .limit(Number(limite));
 
-        const total = await Supplier.countDocuments(filter);
+        const total = await Supplier.countDocuments(query);
 
         res.status(200).json({
             success: true,

@@ -83,7 +83,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nameProduct\": \"Tiki\",\r\n    \"description\": \"bebida gaseosa\",\r\n    \"stock\": 10,\r\n    \"nameCategory\": \"Bebidas\",\r\n    \"price\": 5,\r\n    \"entryDate\": \"2018-01-11\"\r\n\r\n}",
+							"raw": "{\r\n    \"nameProduct\": \"Rica roja\",\r\n    \"description\": \"bebida gaseosa\",\r\n    \"stock\": 10,\r\n    \"nameCategory\": \"Bebidas\",\r\n    \"price\": 7,\r\n    \"entryDate\": \"2018-01-12\",\r\n    \"expirationDate\": \"2025-10-24\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -210,6 +210,232 @@
 								"products",
 								"updateProduct",
 								"681060636762e7ad0af1e97c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EntryProduct",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYwNzM5OTgsImV4cCI6MTc0NjA3NzU5OH0.hx60Ew_N_iw7MUWdAgS44D61HAdh3a4pVthcGHep2sM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/products/productEntryRegistration/6812f17a1ee7cc9dd64f4915",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"products",
+								"productEntryRegistration",
+								"6812f17a1ee7cc9dd64f4915"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "HistoryProductsEntryAndExit",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/products/historyProductView",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"products",
+								"historyProductView"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ExitProduct",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYwNzM5OTgsImV4cCI6MTc0NjA3NzU5OH0.hx60Ew_N_iw7MUWdAgS44D61HAdh3a4pVthcGHep2sM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\": 1,\r\n    \"reason\": \"Porque lo necesitan\",\r\n    \"destination\": \"Peten\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/products/productExitRegistration/6812f5e73f9656edf1aa2879",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"products",
+								"productExitRegistration",
+								"6812f5e73f9656edf1aa2879"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ExpirationDate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/products/productExpiringSoon?month=10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"products",
+								"productExpiringSoon"
+							],
+							"query": [
+								{
+									"key": "month",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ProductMovementsSummary",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/products/productMovementsSummary?startDate=2018-01-01&endDate=2025-10-10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"products",
+								"productMovementsSummary"
+							],
+							"query": [
+								{
+									"key": "startDate",
+									"value": "2018-01-01"
+								},
+								{
+									"key": "endDate",
+									"value": "2025-10-10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MostActiveProducts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/products/mostActiveProducts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"products",
+								"mostActiveProducts"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MonthlyActivityStats",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/products/monthlyActivityStats",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"products",
+								"monthlyActivityStats"
 							]
 						}
 					},
@@ -348,6 +574,249 @@
 								"v1",
 								"categories",
 								"681078faf62b2518b9e51aea"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Supplier",
+			"item": [
+				{
+					"name": "AddSuplier",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYwNzAxMzAsImV4cCI6MTc0NjA3MzczMH0.OI28Fx1Mx4i1NgP10TGxaAlOWSIgK03gS68F4mGWxl4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nameSupplier\": \"Cristian.S.A\",\r\n    \"emailSupplier\":\"cristianSA@gmail.com\",\r\n    \"nameProduct\":\"Rica roja\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/suppliers/addSuplier",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"suppliers",
+								"addSuplier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ViewSupplier",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/suppliers/viewSuplier",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"suppliers",
+								"viewSuplier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateSupplier",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYwNzAxMzAsImV4cCI6MTc0NjA3MzczMH0.OI28Fx1Mx4i1NgP10TGxaAlOWSIgK03gS68F4mGWxl4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nameSupplier\": \"Cristian.S.A\",\r\n    \"emailSupplier\":\"cristiansS.A@gmail.com\",\r\n    \"nameProduct\":\"Rica roja\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/suppliers/updateSuplier/6812eb0e6361196c1c3ea045?=",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"suppliers",
+								"updateSuplier",
+								"6812eb0e6361196c1c3ea045"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteSupplier",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYwNzAxMzAsImV4cCI6MTc0NjA3MzczMH0.OI28Fx1Mx4i1NgP10TGxaAlOWSIgK03gS68F4mGWxl4",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/suppliers/deleteSupiler/6812eb0e6361196c1c3ea045",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"suppliers",
+								"deleteSupiler",
+								"6812eb0e6361196c1c3ea045"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "UpdateUser",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Kevin\",\r\n    \"surname\": \"Reyes\",\r\n    \"username\": \"Krayes\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/users/681058bf1522e6ec3303f759",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"users",
+								"681058bf1522e6ec3303f759"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PasswordUpdate",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"passwordOld\" : \"12345678\",\r\n    \"passwordNew\" : \"passwordNew\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/users/passwordUpdate/681058bf1522e6ec3303f759",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"users",
+								"passwordUpdate",
+								"681058bf1522e6ec3303f759"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteUser",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYwNzk0ODUsImV4cCI6MTc0NjA4MzA4NX0.hybJxakNuJ6Fay5DdKMjfn6fSAsqqJh9UN1FiE8pihE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"confirmDeletion\" : true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/users/userDelete/681058bf1522e6ec3303f759",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"users",
+								"userDelete",
+								"681058bf1522e6ec3303f759"
 							]
 						}
 					},

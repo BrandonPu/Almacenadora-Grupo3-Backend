@@ -8,8 +8,9 @@ const entryHistorySchema = new Schema({
     },
     modify: [
         {
-            type: Object,
-            required: false
+            productId: { type: Schema.Types.ObjectId, ref: 'Product' },
+            quantity: { type: Number },
+            date: { type: Date }
         }
     ],
     state: {

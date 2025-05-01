@@ -3,7 +3,19 @@ import { validarJWT } from "../middlewares/validar-jwt.js";
 import { tieneRole } from "../middlewares/validar-roles.js";
 import {check} from "express-validator";
 
-import { addProduct, productView, deleteProduct, updateProduct, productEntryRegistration, historyProductView, productExitRegistration, productExpiringSoon } from "./product.controller.js";
+import { 
+    addProduct, 
+    productView, 
+    deleteProduct, 
+    updateProduct, 
+    productEntryRegistration, 
+    historyProductView, 
+    productExitRegistration,
+    productExpiringSoon,
+    getProductMovementsSummary,
+    mostActiveProducts,
+    monthlyActivityStats 
+} from "./product.controller.js";
 import { existProductPerName, validarNombreProductoUnico, validarCategoriaExistente  } from "../middlewares/validar-products.js";
 
 const router = Router();
@@ -71,4 +83,23 @@ router.post(
     productExitRegistration
 );
 
+router.get(
+    '/productMovementsSummary',
+    getProductMovementsSummary
+);
+
+router.get(
+    '/mostActiveProducts',
+    mostActiveProducts
+);
+
+router.get(
+    '/productMovementsSummary',
+    getProductMovementsSummary
+);
+
+router.get(
+    '/monthlyActivityStats',
+    monthlyActivityStats
+);
 export default router;

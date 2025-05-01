@@ -70,9 +70,14 @@ export const productView = async (req, res) => {
 
         const total = await Product.countDocuments(query);
 
+        const totalProductsValue = product.reduce((acc, item) => {
+            return acc + (item.stock * item.price);
+        }, 0);
+
         res.status(200).json({
             succes: true,
             total,
+            totalProductsValue,
             product
         })
     } catch (error) {
@@ -198,8 +203,12 @@ export const productEntryRegistration = async (req, res  = response) => {
 
         const history = new EntryHistory({
             keeperUser: userId,
-            modify: [data], 
-            state: true, 
+            modify: [{
+                productId: id,
+                quantity,
+                date: new Date()
+            }],
+            state: true
         });
 
         await history.save();
@@ -227,6 +236,7 @@ export const historyProductView = async (req, res) => {
         
         const productHistoryEntry = await EntryHistory.find(query)
             .populate({path: 'keeperUser', match: {state:true}, select: 'name'})
+            .populate({ path: 'modify.productId', select: 'nameProduct' })
             .skip(Number(desde))
             .limit(Number(limite));
 
@@ -298,6 +308,142 @@ export const productExitRegistration = async (req, res = response) => {
         res.status(500).json({
             success: false,
             msg: "Error processing product exit",
+            error: error.message
+        });
+    }
+};
+
+export const getProductMovementsSummary = async (req, res) => {
+    const { startDate, endDate } = req.query;
+
+    if (!startDate || !endDate) {
+        return res.status(400).json({
+            success: false,
+            msg: 'Start and end dates are required.'
+        });
+    }
+
+    try {
+        const start = new Date(startDate);
+        const end = new Date(endDate);
+        end.setHours(23, 59, 59, 999);
+
+        const products = await Product.find({ state: true });
+
+        let totalEntries = 0;
+        let totalExits = 0;
+
+        products.forEach(product => {
+            const entries = product.registrationEntryRecord.filter(record => {
+                const date = new Date(record.date);
+                return date >= start && date <= end;
+            });
+            totalEntries += entries.reduce((sum, r) => sum + r.quantity, 0);
+
+            const exits = product.purchaseRecord.filter(record => {
+                const date = new Date(record.date);
+                return date >= start && date <= end;
+            });
+            totalExits += exits.reduce((sum, r) => sum + r.quantity, 0);
+        });
+
+        res.status(200).json({
+            success: true,
+            summary: {
+                startDate,
+                endDate,
+                totalProductEntries: totalEntries,
+                totalProductExits: totalExits
+            }
+        });
+
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            msg: 'Error generating product movement summary',
+            error: error.message
+        });
+    }
+};
+
+
+export const mostActiveProducts = async (req, res) => {
+    try {
+        const mostEntries = await Product.aggregate([
+        { $unwind: '$registrationEntryRecord' },
+        {
+            $group: {
+            _id: '$_id',
+            nameProduct: { $first: '$nameProduct' },
+            totalEntries: { $sum: '$registrationEntryRecord.quantity' }
+            }
+        },
+        { $sort: { totalEntries: -1 } },
+        { $limit: 5 }
+        ]);
+        const mostExits = await Product.aggregate([
+        { $unwind: '$purchaseRecord' },
+        {
+            $group: {
+            _id: '$_id',
+            nameProduct: { $first: '$nameProduct' },
+            totalExits: { $sum: '$purchaseRecord.quantity' }
+            }
+        },
+        { $sort: { totalExits: -1 } },
+        { $limit: 5 }
+        ]);
+
+        res.status(200).json({
+        success: true,
+        mostEntries,
+        mostExits
+        });
+    } catch (error) {
+        res.status(500).json({
+        success: false,
+        msg: 'Error retrieving most active products',
+        error: error.message
+        });
+    }
+};
+
+
+export const monthlyActivityStats = async (req, res) => {
+    try {
+        const entries = await EntryHistory.aggregate([
+            { $unwind: "$modify" },
+            {
+                $group: {
+                    _id: { $month: "$modify.date" },
+                    totalEntries: { $sum: "$modify.quantity" }
+                }
+            },
+            { $sort: { totalEntries: -1 } }
+        ]);
+
+        const exits = await ExitHistory.aggregate([
+            { $match: { date: { $ne: null }, quantity: { $ne: null } } },
+            {
+                $group: {
+                    _id: { $month: "$date" },
+                    totalExits: { $sum: "$quantity" }
+                }
+            },
+            { $sort: { totalExits: -1 } }
+        ]);
+
+        res.status(200).json({
+            success: true,
+            mostActiveEntryMonth: entries[0],
+            leastActiveEntryMonth: entries[entries.length - 1],
+            mostActiveExitMonth: exits[0],
+            leastActiveExitMonth: exits[exits.length - 1]
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            msg: "Error fetching monthly activity stats",
             error: error.message
         });
     }

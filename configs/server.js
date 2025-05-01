@@ -13,6 +13,7 @@ import authRoutes from '../src/auth/auth.routes.js';
 import productRoutes from '../src/products/product.routes.js';
 import categoryRoutes from '../src/categories/category.routes.js';
 import supplierRoutes from '../src/supplier/supplier.routes.js';
+import userRoutes from '../src/users/user.routes.js';
 
 const middlewares = (app) => {
     app.use(express.urlencoded({extended : false}));
@@ -28,6 +29,7 @@ const routes = (app) => {
     app.use('/almacenadora/v1/products', productRoutes);
     app.use('/almacenadora/v1/categories', categoryRoutes);
     app.use('/almacenadora/v1/suppliers', supplierRoutes);
+    app.use('/almacenadora/v1/users', userRoutes);
 };
 
 export const conetarDB = async() => {
