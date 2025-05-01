@@ -21,11 +21,13 @@ const ProductSchema = Schema({
         ref: 'Category',
         required: [true, 'Category required']
     },
-    keeperSupplier : {
-        type: Schema.Types.ObjectId,
-        ref: 'Supplier',
-        required: false
-    },
+    keeperSupplier : [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Supplier',
+            required: false
+        }
+    ],
     price : {
         type: Number,
         required: [true, 'Price required'],

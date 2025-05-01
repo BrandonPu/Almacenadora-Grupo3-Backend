@@ -1,215 +1,186 @@
 [{
   "_id": {
-    "$oid": "681060636762e7ad0af1e97c"
+    "$oid": "6812f17a1ee7cc9dd64f4915"
   },
-  "nameProduct": "COCA-COLA",
+  "nameProduct": "Seven",
   "description": "Bebida gaseosa",
-  "stock": 12,
-  "price": 10.5,
+  "stock": 14,
+  "keeperCategory": {
+    "$oid": "681078faf62b2518b9e51aea"
+  },
+  "price": 7,
   "entryDate": {
     "$date": "2018-01-10T00:00:00.000Z"
   },
-  "state": true,
-  "createdAt": {
-    "$date": "2025-04-29T05:15:15.010Z"
-  },
-  "updatedAt": {
-    "$date": "2025-04-30T21:44:05.666Z"
-  },
-  "purchaseRecord": [
-    {
-      "quantity": 2,
-      "date": {
-        "$date": "2025-04-30T21:44:05.653Z"
-      },
-      "user": {
-        "$oid": "6812750bf1005d4877b1099a"
-      },
-      "_id": {
-        "$oid": "681299a5b20175fb2b669a79"
-      }
-    }
-  ]
-},
-{
-  "_id": {
-    "$oid": "681077246a6393b97ff741b4"
-  },
-  "nameProduct": "Tiki",
-  "description": "bebida gaseosa",
-  "stock": 10,
-  "keeperCategory": {
-    "$oid": "681076df6a6393b97ff741b0"
-  },
-  "price": 5,
-  "entryDate": {
-    "$date": "2018-01-11T00:00:00.000Z"
+  "expirationDate": {
+    "$date": "2025-08-01T00:00:00.000Z"
   },
   "state": true,
-  "createdAt": {
-    "$date": "2025-04-29T06:52:20.086Z"
-  },
-  "updatedAt": {
-    "$date": "2025-04-30T21:44:59.646Z"
-  },
+  "purchaseRecord": [],
   "registrationEntryRecord": [
     {
-      "quantity": 2,
+      "quantity": 5,
       "date": {
-        "$date": "2025-04-30T20:51:59.896Z"
+        "$date": "2025-05-01T04:40:44.077Z"
       },
       "user": {
-        "$oid": "6812750bf1005d4877b1099a"
+        "$oid": "6810481e17449a0c7c9f3cdc"
       },
       "_id": {
-        "$oid": "68128d6fc9eec2bd1abef769"
-      }
-    },
-    {
-      "quantity": 2,
-      "date": {
-        "$date": "2025-04-30T20:52:03.422Z"
-      },
-      "user": {
-        "$oid": "6812750bf1005d4877b1099a"
-      },
-      "_id": {
-        "$oid": "68128d73c9eec2bd1abef76f"
+        "$oid": "6812fb4c454b6f8f51ec970c"
       }
     }
   ],
-  "purchaseRecord": [
+  "createdAt": {
+    "$date": "2025-05-01T03:58:50.089Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-01T20:19:12.661Z"
+  },
+  "keeperSupplier": [
     {
-      "quantity": 2,
-      "date": {
-        "$date": "2025-04-30T21:44:38.791Z"
-      },
-      "user": {
-        "$oid": "6812750bf1005d4877b1099a"
-      },
-      "_id": {
-        "$oid": "681299c6b20175fb2b669a81"
-      }
-    },
-    {
-      "quantity": 2,
-      "date": {
-        "$date": "2025-04-30T21:44:59.644Z"
-      },
-      "user": {
-        "$oid": "6812750bf1005d4877b1099a"
-      },
-      "_id": {
-        "$oid": "681299dbb20175fb2b669a8d"
-      }
+      "$oid": "6813d740734d69260d9e6263"
     }
   ]
 },
 {
   "_id": {
-    "$oid": "68129ff10a2671e79e5d188a"
+    "$oid": "6812f5e73f9656edf1aa2879"
   },
-  "nameProduct": "Rica cola",
+  "nameProduct": "Tiki",
   "description": "bebida gaseosa",
-  "stock": 10,
+  "stock": 7,
   "keeperCategory": {
     "$oid": "681076df6a6393b97ff741b0"
   },
-  "price": 5,
+  "price": 7,
   "entryDate": {
-    "$date": "2018-01-11T00:00:00.000Z"
+    "$date": "2018-01-12T00:00:00.000Z"
   },
   "expirationDate": {
-    "$date": "2027-12-12T00:00:00.000Z"
+    "$date": "2025-10-24T00:00:00.000Z"
   },
   "state": true,
-  "purchaseRecord": [],
+  "purchaseRecord": [
+    {
+      "quantity": 1,
+      "date": {
+        "$date": "2025-05-01T04:49:55.755Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "6812fd73d7d7642c3f6a656a"
+      }
+    },
+    {
+      "quantity": 1,
+      "date": {
+        "$date": "2025-05-01T05:25:39.165Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "681305d397071819ff50c33e"
+      }
+    },
+    {
+      "quantity": 1,
+      "date": {
+        "$date": "2025-05-01T05:25:40.481Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "681305d497071819ff50c348"
+      }
+    }
+  ],
   "registrationEntryRecord": [],
   "createdAt": {
-    "$date": "2025-04-30T22:10:57.872Z"
+    "$date": "2025-05-01T04:17:43.250Z"
   },
   "updatedAt": {
-    "$date": "2025-04-30T22:10:57.872Z"
-  }
+    "$date": "2025-05-01T20:20:50.766Z"
+  },
+  "keeperSupplier": [
+    {
+      "$oid": "6813d771734d69260d9e627e"
+    }
+  ]
 },
 {
   "_id": {
-    "$oid": "6812a0480a2671e79e5d188f"
-  },
-  "nameProduct": "Chorrocola",
-  "description": "bebida gaseosa",
-  "stock": 10,
-  "keeperCategory": {
-    "$oid": "681076df6a6393b97ff741b0"
-  },
-  "price": 5,
-  "entryDate": {
-    "$date": "2018-01-11T00:00:00.000Z"
-  },
-  "expirationDate": {
-    "$date": "2025-05-29T00:00:00.000Z"
-  },
-  "state": true,
-  "purchaseRecord": [],
-  "registrationEntryRecord": [],
-  "createdAt": {
-    "$date": "2025-04-30T22:12:24.163Z"
-  },
-  "updatedAt": {
-    "$date": "2025-04-30T22:12:24.163Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "6812a285dfa041049ea228c7"
-  },
-  "nameProduct": "Seven",
-  "description": "bebida gaseosa",
-  "stock": 10,
-  "keeperCategory": {
-    "$oid": "681076df6a6393b97ff741b0"
-  },
-  "price": 5,
-  "entryDate": {
-    "$date": "2018-01-11T00:00:00.000Z"
-  },
-  "expirationDate": {
-    "$date": "2025-06-29T00:00:00.000Z"
-  },
-  "state": true,
-  "purchaseRecord": [],
-  "registrationEntryRecord": [],
-  "createdAt": {
-    "$date": "2025-04-30T22:21:57.762Z"
-  },
-  "updatedAt": {
-    "$date": "2025-04-30T22:21:57.762Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "6812a291dfa041049ea228cc"
+    "$oid": "6812f995e6d0e00f85ceae0c"
   },
   "nameProduct": "Rica roja",
   "description": "bebida gaseosa",
-  "stock": 10,
+  "stock": 25,
   "keeperCategory": {
     "$oid": "681076df6a6393b97ff741b0"
   },
-  "price": 5,
+  "price": 7,
   "entryDate": {
-    "$date": "2018-01-11T00:00:00.000Z"
+    "$date": "2018-01-12T00:00:00.000Z"
   },
   "expirationDate": {
-    "$date": "2025-05-11T00:00:00.000Z"
+    "$date": "2025-10-24T00:00:00.000Z"
   },
   "state": true,
   "purchaseRecord": [],
-  "registrationEntryRecord": [],
+  "registrationEntryRecord": [
+    {
+      "quantity": 5,
+      "date": {
+        "$date": "2025-05-01T04:34:23.265Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "6812f9cfe6d0e00f85ceae13"
+      }
+    },
+    {
+      "quantity": 5,
+      "date": {
+        "$date": "2025-05-01T04:35:04.826Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "6812f9f80627be207def608c"
+      }
+    },
+    {
+      "quantity": 5,
+      "date": {
+        "$date": "2025-05-01T04:37:02.854Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "6812fa6e6cb1b989d4fa4eea"
+      }
+    }
+  ],
   "createdAt": {
-    "$date": "2025-04-30T22:22:09.936Z"
+    "$date": "2025-05-01T04:33:25.291Z"
   },
   "updatedAt": {
-    "$date": "2025-04-30T22:22:09.936Z"
-  }
+    "$date": "2025-05-01T20:20:01.923Z"
+  },
+  "keeperSupplier": [
+    {
+      "$oid": "6813d6a31a448776392f85b8"
+    },
+    {
+      "$oid": "6813d771734d69260d9e627e"
+    }
+  ]
 }]

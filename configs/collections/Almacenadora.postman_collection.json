@@ -184,13 +184,13 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDU5MDg3NzEsImV4cCI6MTc0NTkxMjM3MX0.LzjkUokk3y3m8IEPj2JPJzP-EmMhn4r-kepE9ItjqBs",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYxMjY3NjgsImV4cCI6MTc0NjEzMDM2OH0.aCpdR691OkVjna0nw6yEPvFinblN2B9wo_6XPFG1PeA",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nameProduct\": \"COCA-COLA\",\r\n    \"description\": \"Bebida gaseosa\",\r\n    \"stock\": 14,\r\n    \"price\": 10.5,\r\n    \"entryDate\": \"2018-01-10\"\r\n\r\n}",
+							"raw": "{\r\n    \"nameProduct\": \"Seven\",\r\n    \"description\": \"Bebida gaseosa\",\r\n    \"stock\": 14,\r\n    \"price\": 7,\r\n    \"entryDate\": \"2018-01-10\",\r\n    \"expirationDate\": \"2025-08-01\",\r\n    \"nameCategory\" : \"Alimentos enlatados\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -198,7 +198,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3001/almacenadora/v1/products/updateProduct/681060636762e7ad0af1e97c",
+							"raw": "http://localhost:3001/almacenadora/v1/products/updateProduct/6812f17a1ee7cc9dd64f4915",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -209,7 +209,7 @@
 								"v1",
 								"products",
 								"updateProduct",
-								"681060636762e7ad0af1e97c"
+								"6812f17a1ee7cc9dd64f4915"
 							]
 						}
 					},
@@ -591,7 +591,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYwNzAxMzAsImV4cCI6MTc0NjA3MzczMH0.OI28Fx1Mx4i1NgP10TGxaAlOWSIgK03gS68F4mGWxl4",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYxMzAxNjIsImV4cCI6MTc0NjEzMzc2Mn0.mBy4v2T0vuyUeA9VEjfYhR0T4ohuS52_TFkWzSig878",
 								"type": "text"
 							}
 						],
@@ -650,13 +650,13 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYwNzAxMzAsImV4cCI6MTc0NjA3MzczMH0.OI28Fx1Mx4i1NgP10TGxaAlOWSIgK03gS68F4mGWxl4",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYxMzAxNjIsImV4cCI6MTc0NjEzMzc2Mn0.mBy4v2T0vuyUeA9VEjfYhR0T4ohuS52_TFkWzSig878",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nameSupplier\": \"Cristian.S.A\",\r\n    \"emailSupplier\":\"cristiansS.A@gmail.com\",\r\n    \"nameProduct\":\"Rica roja\"\r\n}",
+							"raw": "{\r\n    \"nameSupplier\": \"Cristian.S.A\",\r\n    \"emailSupplier\":\"cristiansS.A@gmail.com\",\r\n    \"nameProduct\":\"Tiki\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -664,7 +664,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3001/almacenadora/v1/suppliers/updateSuplier/6812eb0e6361196c1c3ea045?=",
+							"raw": "http://localhost:3001/almacenadora/v1/suppliers/updateSuplier/6813d771734d69260d9e627e",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -675,13 +675,7 @@
 								"v1",
 								"suppliers",
 								"updateSuplier",
-								"6812eb0e6361196c1c3ea045"
-							],
-							"query": [
-								{
-									"key": "",
-									"value": ""
-								}
+								"6813d771734d69260d9e627e"
 							]
 						}
 					},

@@ -159,9 +159,13 @@ export const updateProduct = async (req, res  = response) => {
         const {_id, ...data} = req.body;
         data.state = true;
 
-        const category = await Category.findOne({nameCategory: data.nameCategory});
+        const category = await Category.findOne({ nameCategory: data.nameCategory, state: true });
 
-        const product = await Product.findByIdAndUpdate(id, data, {new: true});
+        const product = await Product.findByIdAndUpdate(
+            id,
+            { ...data, keeperCategory: category._id },
+            { new: true }
+        );
 
         await Category.findByIdAndUpdate(category._id, {
             $push: { keeperProduct: product._id}

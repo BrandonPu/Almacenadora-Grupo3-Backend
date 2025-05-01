@@ -69,12 +69,26 @@ export const updateSupplier = async (req, res = response) => {
         const { id } = req.params;
         const { _id, ...data } = req.body;
 
-        const updated = await Supplier.findByIdAndUpdate(id, data, { new: true });
+        const product = await Product.findOne({nameProduct: data.nameProduct});
+
+        const supplierUpdated = await Supplier.findByIdAndUpdate(
+            id,
+            {
+                $push: {  keeperProduct: product._id},
+                ...data,
+                state: true
+            },
+            { new: true }
+        );
+
+        await Product.findByIdAndUpdate(product._id, {
+            $push: { keeperSupplier: supplierUpdated._id }
+        });
 
         res.status(200).json({
             success: true,
             msg: "Supplier updated successfully",
-            supplier: updated
+            supplier: supplierUpdated
         });
     } catch (error) {
         res.status(500).json({
