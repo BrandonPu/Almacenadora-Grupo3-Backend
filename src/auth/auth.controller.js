@@ -12,7 +12,10 @@ export const login = async(req, res) => {
         return res.status(200).json({
             msg: 'Login successful',
             userDetails: {
-                username: user.email,
+                name: user.name,
+                surname: user.surname,
+                username: user.username,
+                email: user.email,
                 token: token
             }
         });
