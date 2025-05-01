@@ -4,7 +4,7 @@
   },
   "nameProduct": "COCA-COLA",
   "description": "Bebida gaseosa",
-  "stock": 14,
+  "stock": 12,
   "price": 10.5,
   "entryDate": {
     "$date": "2018-01-10T00:00:00.000Z"
@@ -14,27 +14,22 @@
     "$date": "2025-04-29T05:15:15.010Z"
   },
   "updatedAt": {
-    "$date": "2025-04-29T06:39:39.220Z"
-  }
-},
-{
-  "_id": {
-    "$oid": "68106b9fc8beb5c7a23cee10"
+    "$date": "2025-04-30T21:44:05.666Z"
   },
-  "nameProduct": "Pepsi",
-  "description": "bebida gaseosa",
-  "stock": 10,
-  "price": 9,
-  "entryDate": {
-    "$date": "2018-01-11T00:00:00.000Z"
-  },
-  "state": true,
-  "createdAt": {
-    "$date": "2025-04-29T06:03:11.252Z"
-  },
-  "updatedAt": {
-    "$date": "2025-04-29T06:03:11.252Z"
-  }
+  "purchaseRecord": [
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-04-30T21:44:05.653Z"
+      },
+      "user": {
+        "$oid": "6812750bf1005d4877b1099a"
+      },
+      "_id": {
+        "$oid": "681299a5b20175fb2b669a79"
+      }
+    }
+  ]
 },
 {
   "_id": {
@@ -55,6 +50,166 @@
     "$date": "2025-04-29T06:52:20.086Z"
   },
   "updatedAt": {
-    "$date": "2025-04-29T06:52:20.086Z"
+    "$date": "2025-04-30T21:44:59.646Z"
+  },
+  "registrationEntryRecord": [
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-04-30T20:51:59.896Z"
+      },
+      "user": {
+        "$oid": "6812750bf1005d4877b1099a"
+      },
+      "_id": {
+        "$oid": "68128d6fc9eec2bd1abef769"
+      }
+    },
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-04-30T20:52:03.422Z"
+      },
+      "user": {
+        "$oid": "6812750bf1005d4877b1099a"
+      },
+      "_id": {
+        "$oid": "68128d73c9eec2bd1abef76f"
+      }
+    }
+  ],
+  "purchaseRecord": [
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-04-30T21:44:38.791Z"
+      },
+      "user": {
+        "$oid": "6812750bf1005d4877b1099a"
+      },
+      "_id": {
+        "$oid": "681299c6b20175fb2b669a81"
+      }
+    },
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-04-30T21:44:59.644Z"
+      },
+      "user": {
+        "$oid": "6812750bf1005d4877b1099a"
+      },
+      "_id": {
+        "$oid": "681299dbb20175fb2b669a8d"
+      }
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "68129ff10a2671e79e5d188a"
+  },
+  "nameProduct": "Rica cola",
+  "description": "bebida gaseosa",
+  "stock": 10,
+  "keeperCategory": {
+    "$oid": "681076df6a6393b97ff741b0"
+  },
+  "price": 5,
+  "entryDate": {
+    "$date": "2018-01-11T00:00:00.000Z"
+  },
+  "expirationDate": {
+    "$date": "2027-12-12T00:00:00.000Z"
+  },
+  "state": true,
+  "purchaseRecord": [],
+  "registrationEntryRecord": [],
+  "createdAt": {
+    "$date": "2025-04-30T22:10:57.872Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-30T22:10:57.872Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6812a0480a2671e79e5d188f"
+  },
+  "nameProduct": "Chorrocola",
+  "description": "bebida gaseosa",
+  "stock": 10,
+  "keeperCategory": {
+    "$oid": "681076df6a6393b97ff741b0"
+  },
+  "price": 5,
+  "entryDate": {
+    "$date": "2018-01-11T00:00:00.000Z"
+  },
+  "expirationDate": {
+    "$date": "2025-05-29T00:00:00.000Z"
+  },
+  "state": true,
+  "purchaseRecord": [],
+  "registrationEntryRecord": [],
+  "createdAt": {
+    "$date": "2025-04-30T22:12:24.163Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-30T22:12:24.163Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6812a285dfa041049ea228c7"
+  },
+  "nameProduct": "Seven",
+  "description": "bebida gaseosa",
+  "stock": 10,
+  "keeperCategory": {
+    "$oid": "681076df6a6393b97ff741b0"
+  },
+  "price": 5,
+  "entryDate": {
+    "$date": "2018-01-11T00:00:00.000Z"
+  },
+  "expirationDate": {
+    "$date": "2025-06-29T00:00:00.000Z"
+  },
+  "state": true,
+  "purchaseRecord": [],
+  "registrationEntryRecord": [],
+  "createdAt": {
+    "$date": "2025-04-30T22:21:57.762Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-30T22:21:57.762Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6812a291dfa041049ea228cc"
+  },
+  "nameProduct": "Rica roja",
+  "description": "bebida gaseosa",
+  "stock": 10,
+  "keeperCategory": {
+    "$oid": "681076df6a6393b97ff741b0"
+  },
+  "price": 5,
+  "entryDate": {
+    "$date": "2018-01-11T00:00:00.000Z"
+  },
+  "expirationDate": {
+    "$date": "2025-05-11T00:00:00.000Z"
+  },
+  "state": true,
+  "purchaseRecord": [],
+  "registrationEntryRecord": [],
+  "createdAt": {
+    "$date": "2025-04-30T22:22:09.936Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-30T22:22:09.936Z"
   }
 }]

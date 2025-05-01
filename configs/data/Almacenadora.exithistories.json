@@ -1,0 +1,125 @@
+[{
+  "_id": {
+    "$oid": "68127bb85b5e87d76c4280db"
+  },
+  "keeperUser": {
+    "$oid": "6812750bf1005d4877b1099a"
+  },
+  "date": {
+    "$date": "2025-04-30T19:36:24.181Z"
+  },
+  "quantity": 2,
+  "reason": "porque si",
+  "destination": "peten",
+  "productId": {
+    "$oid": "68106b9fc8beb5c7a23cee10"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-30T19:36:24.185Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-30T19:36:24.185Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68127db3357076615afcde70"
+  },
+  "keeperUser": {
+    "$oid": "6812750bf1005d4877b1099a"
+  },
+  "date": {
+    "$date": "2025-04-30T19:44:51.061Z"
+  },
+  "quantity": 2,
+  "reason": "porque si",
+  "destination": "peten",
+  "productId": {
+    "$oid": "68106b9fc8beb5c7a23cee10"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-30T19:44:51.065Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-30T19:44:51.065Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681299a5b20175fb2b669a7c"
+  },
+  "keeperUser": {
+    "$oid": "6812750bf1005d4877b1099a"
+  },
+  "date": {
+    "$date": "2025-04-30T21:44:05.660Z"
+  },
+  "quantity": 2,
+  "reason": "porque si",
+  "destination": "peten",
+  "productId": {
+    "$oid": "681060636762e7ad0af1e97c"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-30T21:44:05.663Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-30T21:44:05.663Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681299c6b20175fb2b669a86"
+  },
+  "keeperUser": {
+    "$oid": "6812750bf1005d4877b1099a"
+  },
+  "date": {
+    "$date": "2025-04-30T21:44:38.793Z"
+  },
+  "quantity": 2,
+  "reason": "porque si",
+  "destination": "peten",
+  "productId": {
+    "$oid": "681077246a6393b97ff741b4"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-30T21:44:38.794Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-30T21:44:38.794Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681299dbb20175fb2b669a93"
+  },
+  "keeperUser": {
+    "$oid": "6812750bf1005d4877b1099a"
+  },
+  "date": {
+    "$date": "2025-04-30T21:44:59.645Z"
+  },
+  "quantity": 2,
+  "reason": "porque si",
+  "destination": "peten",
+  "productId": {
+    "$oid": "681077246a6393b97ff741b4"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-30T21:44:59.645Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-30T21:44:59.645Z"
+  },
+  "__v": 0
+}]

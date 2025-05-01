@@ -3,20 +3,29 @@ import { validarJWT } from "../middlewares/validar-jwt.js";
 import { tieneRole } from "../middlewares/validar-roles.js";
 import {check} from "express-validator";
 
-import { addProduct, productView, deleteProduct, updateProduct, productEntryRegistration, historyProductView } from "./product.controller.js";
-import { existProductPerName } from "../middlewares/validar-products.js";
+import { addProduct, productView, deleteProduct, updateProduct, productEntryRegistration, historyProductView, productExitRegistration, productExpiringSoon } from "./product.controller.js";
+import { existProductPerName, validarNombreProductoUnico, validarCategoriaExistente  } from "../middlewares/validar-products.js";
 
 const router = Router();
 
 router.post(
     '/addProduct',
-    existProductPerName,
+    [
+        existProductPerName,
+        validarNombreProductoUnico,
+        validarCategoriaExistente
+    ],
     addProduct
 );
 
 router.get(
     '/productView',
     productView
+);
+
+router.get(
+    '/productExpiringSoon',
+    productExpiringSoon
 );
 
 router.delete(
@@ -51,6 +60,15 @@ router.put(
 router.get(
     '/historyProductView',
     historyProductView
+);
+
+router.post(
+    '/productExitRegistration/:id',
+    [
+        validarJWT,
+        check("id", "No es un Id válido").isMongoId()
+    ],
+    productExitRegistration
 );
 
 export default router;

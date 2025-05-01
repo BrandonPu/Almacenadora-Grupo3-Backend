@@ -1,6 +1,6 @@
 import {Schema, model} from "mongoose";
 
-const entryAndExitHistorySchema = new Schema({
+const entryHistorySchema = new Schema({
     keeperUser: {
         type: Schema.Types.ObjectId,
         ref: 'User',
@@ -9,7 +9,7 @@ const entryAndExitHistorySchema = new Schema({
     modify: [
         {
             type: Object,
-            required: true
+            required: false
         }
     ],
     state: {
@@ -22,4 +22,4 @@ const entryAndExitHistorySchema = new Schema({
     versionkey: false
 });
 
-export default model('entryAndExitHistory', entryAndExitHistorySchema)
+export default model('entryHistory', entryHistorySchema)

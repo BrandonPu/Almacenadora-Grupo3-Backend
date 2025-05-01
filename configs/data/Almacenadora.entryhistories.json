@@ -1,0 +1,133 @@
+[{
+  "_id": {
+    "$oid": "68127706128326db679fa59e"
+  },
+  "keeperUser": {
+    "$oid": "6812750bf1005d4877b1099a"
+  },
+  "modify": [
+    {
+      "stock": 25,
+      "entryDate": "2018-01-11",
+      "state": true
+    }
+  ],
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-30T19:16:22.066Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-30T19:16:22.066Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68128abb18d050ec2b1e8e2d"
+  },
+  "keeperUser": {
+    "$oid": "6812750bf1005d4877b1099a"
+  },
+  "modify": [
+    {
+      "entryDate": "2018-01-11",
+      "state": true
+    }
+  ],
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-30T20:40:27.854Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-30T20:40:27.854Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68128b9918d050ec2b1e8e31"
+  },
+  "keeperUser": {
+    "$oid": "6812750bf1005d4877b1099a"
+  },
+  "modify": [
+    {
+      "entryDate": "2018-01-11",
+      "state": true
+    }
+  ],
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-30T20:44:09.363Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-30T20:44:09.363Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68128be718d050ec2b1e8e3f"
+  },
+  "keeperUser": {
+    "$oid": "6812750bf1005d4877b1099a"
+  },
+  "modify": [
+    {
+      "entryDate": "2018-01-11",
+      "state": true
+    }
+  ],
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-30T20:45:27.998Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-30T20:45:27.998Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68128d6fc9eec2bd1abef76c"
+  },
+  "keeperUser": {
+    "$oid": "6812750bf1005d4877b1099a"
+  },
+  "modify": [
+    {
+      "entryDate": "2018-01-11",
+      "state": true
+    }
+  ],
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-30T20:51:59.901Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-30T20:51:59.901Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68128d73c9eec2bd1abef773"
+  },
+  "keeperUser": {
+    "$oid": "6812750bf1005d4877b1099a"
+  },
+  "modify": [
+    {
+      "entryDate": "2018-01-11",
+      "state": true
+    }
+  ],
+  "state": true,
+  "createdAt": {
+    "$date": "2025-04-30T20:52:03.425Z"
+  },
+  "updatedAt": {
+    "$date": "2025-04-30T20:52:03.425Z"
+  },
+  "__v": 0
+}]

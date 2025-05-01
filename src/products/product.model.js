@@ -24,7 +24,7 @@ const ProductSchema = Schema({
     keeperSupplier : {
         type: Schema.Types.ObjectId,
         ref: 'Supplier',
-        //required: [true, 'Supplier required']
+        required: false
     },
     price : {
         type: Number,
@@ -35,9 +35,24 @@ const ProductSchema = Schema({
         type: Date,
         required: [true, 'Date required']
     },
-    purchaseRecord: {
-        type: Number,
-        required: false
+    purchaseRecord: [
+        {
+            quantity: { type: Number, required: true },
+            date: { type: Date, default: Date.now },
+            user: { type: Schema.Types.ObjectId, ref: 'User' }
+        }
+    ],
+    registrationEntryRecord: [
+        {
+            quantity: { type: Number, required: true },
+            date: { type: Date, default: Date.now },
+            user: { type: Schema.Types.ObjectId, ref: 'User' }
+        }
+    ],
+    expirationDate: {
+        type: Date,
+        required: [true, 'Expiration date required']
+
     },
     state: {
         type: Boolean,

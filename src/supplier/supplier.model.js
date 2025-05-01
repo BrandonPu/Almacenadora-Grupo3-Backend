@@ -6,11 +6,6 @@ const SupplierSchema = Schema({
         required: [true, 'Name required'],
         maxLength: [25, 'Cant be overcome 25 characters']
     },
-    productSupplier : {
-        type: String,
-        required: [true, 'Product required'],
-        maxLength: [25, 'Cant be overcome 25 characters']
-    },
     emailSupplier : {
         type: String,
         required: [true, 'Email required'],
@@ -21,6 +16,10 @@ const SupplierSchema = Schema({
         ref: 'Product',
         required: false
     }],
+    state: {
+        type: Boolean,
+        default: true
+    } 
 },
 {
     timestamps: true,
