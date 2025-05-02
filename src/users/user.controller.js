@@ -2,17 +2,35 @@ import { response } from "express";
 import {hash, verify} from "argon2";
 import User from './user.model.js';
 
+export const usersView = async (req, res = response) => {
+    try {
+        const { limite = 10, desde = 0 } = req.query;
+        const query = { state: true };
+
+        const users = await User.find(query)
+            .skip(Number(desde))
+            .limit(Number(limite));
+
+        const total = await User.countDocuments(query);
+
+        res.status(200).json({
+            success: true,
+            total,
+            users
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            msg: "Error getting users",
+            error: error.message
+        });
+    }
+};
+
 export const updateUser = async (req, res  = response) => {
     try {
-        const {id} = req.params;
-        const {_id, password, email, ...data} = req.body;
-
-        if (password || email) {
-            return res.status(400).json({
-                success: false,
-                message: 'Cannot update password or email directly',
-            });
-        }   
+        const id = req.usuario._id;
+        const {_id, password, email, ...data} = req.body; 
 
         const user = await User.findByIdAndUpdate(id, data, {new: true});
 
@@ -32,23 +50,11 @@ export const updateUser = async (req, res  = response) => {
 
 export const updatePassword = async (req, res) => {
     try {
-        const { id } = req.params;
-        const { passwordOld, passwordNew } = req.body;
-        const user = await User.findById(id);
+        const id = req.usuario._id;
+        const { passwordNew } = req.body;
 
-        const validPassword = await verify(user.password, passwordOld);
-        if (!validPassword) {
-            return res.status(400).json({
-                success: false,
-                msg: 'The current password is incorrect'
-            });
-        }
-
-        if(passwordNew){
-            const passwordUpdate = await hash(passwordNew)
-            await User.findByIdAndUpdate(id, { password: passwordUpdate });
-        };
-
+        const passwordUpdate = await hash(passwordNew)
+        await User.findByIdAndUpdate(id, { password: passwordUpdate });
 
         res.status(200).json({
             success: true,
@@ -67,16 +73,8 @@ export const updatePassword = async (req, res) => {
 
 export const deleteUser = async (req, res) => {
     const { id } = req.params;
-    const { password, confirmDeletion} = req.body;
 
-    const user = await User.findById(id);
     try {
-        if (!confirmDeletion) {
-            return res.status(400).json({
-                success: false,
-                msg: 'Please confirm the deletion action'
-            });
-        }
 
         await User.findByIdAndUpdate(id, { state: false });
 
@@ -98,22 +96,6 @@ export const updateRole = async (req, res) => {
     try {
         const { id } = req.params;
         const { role } = req.body;
-
-        const user = await User.findById(id);
-        if (!user) {
-            return res.status(404).json({
-                success: false,
-                msg: 'User not found'
-            });
-        }
-
-        const validRoles = ['ADMIN_ROLE', 'NORMAL_ROLE'];
-        if (!validRoles.includes(role)) {
-            return res.status(400).json({
-                success: false,
-                msg: 'Invalid role. Allowed roles: ADMIN_ROLE, NORMAL_ROLE'
-            });
-        }
 
         await User.findByIdAndUpdate(id, { role });
 

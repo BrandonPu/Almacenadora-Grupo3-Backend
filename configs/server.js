@@ -14,6 +14,7 @@ import productRoutes from '../src/products/product.routes.js';
 import categoryRoutes from '../src/categories/category.routes.js';
 import supplierRoutes from '../src/supplier/supplier.routes.js';
 import userRoutes from '../src/users/user.routes.js';
+import frecuentClientRoutes from '../src/frecuentClients/frecuentClient.routes.js';
 
 const middlewares = (app) => {
     app.use(express.urlencoded({extended : false}));
@@ -30,6 +31,7 @@ const routes = (app) => {
     app.use('/almacenadora/v1/categories', categoryRoutes);
     app.use('/almacenadora/v1/suppliers', supplierRoutes);
     app.use('/almacenadora/v1/users', userRoutes);
+    app.use('/almacenadora/v1/frecuentClients', frecuentClientRoutes);
 };
 
 export const conetarDB = async() => {

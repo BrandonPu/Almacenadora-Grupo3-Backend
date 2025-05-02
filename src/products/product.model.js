@@ -31,7 +31,7 @@ const ProductSchema = Schema({
     price : {
         type: Number,
         required: [true, 'Price required'],
-        min: 0
+        min: 1
     },
     entryDate : {
         type: Date,

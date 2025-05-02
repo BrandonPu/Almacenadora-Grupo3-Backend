@@ -87,16 +87,10 @@ export const categoryView = async (req, res) => {
 
 export const deleteCategory = async (req, res) => {
     const { id } = req.params;
+    const defaultCategory = req.defaultCategory;
 
     try {
 
-        const defaultCategory = await Category.findOne({ nameCategory: "GlobalCategory" });
-        if (!defaultCategory) {
-            return res.status(400).json({
-                success: false,
-                message: 'The default category "News" does not exist.',
-            });
-        }
         await Product.updateMany({ keeperCategory: id }, { keeperCategory: defaultCategory._id });
 
         await Category.findByIdAndUpdate(id, { state: false });

@@ -3,7 +3,7 @@ import { check } from "express-validator";
 import { validarCampos } from "../middlewares/validar-campos.js";
 import { validarJWT } from "../middlewares/validar-jwt.js";
 import { tieneRole } from "../middlewares/validar-roles.js";
-import { existingSupplier } from "../middlewares/validar-supplier.js";
+import { existingSupplier, validateProductForSupplier, confirmAction, validateUniquePhoneNumber } from "../middlewares/validar-supplier.js";
 
 import {addSupplier,supplierView,updateSupplier,deleteSupplier} from "./supplier.controller.js";
 
@@ -15,6 +15,8 @@ router.post(
   [
     validarJWT,
     existingSupplier,
+    validateProductForSupplier,
+    validateUniquePhoneNumber,
     validarCampos,
   ],
   addSupplier
@@ -31,6 +33,7 @@ router.put(
   [
     validarJWT,
     tieneRole("ADMIN_ROLE"),
+    validateProductForSupplier,
     check("id", "It is not a valid id").isMongoId(),
     validarCampos,
   ],
@@ -43,6 +46,7 @@ router.delete(
   [
     validarJWT,
     tieneRole("ADMIN_ROLE"),
+    confirmAction,
     check("id", "It is not a valid id").isMongoId(),
     validarCampos,
   ],

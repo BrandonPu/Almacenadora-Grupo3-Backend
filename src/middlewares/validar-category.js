@@ -19,3 +19,37 @@ export const existingNameCategory = async (req, res, next) => {
         })
     }
 };
+
+export const validateDefaultCategory = async (req, res, next) => {
+    try {
+        const defaultCategory = await Category.findOne({ nameCategory: "GlobalCategory", state: true });
+        if (!defaultCategory) {
+            return res.status(400).json({
+                success: false,
+                message: 'The default category "GlobalCategory" does not exist or is disabled.',
+            });
+        }
+
+        req.defaultCategory = defaultCategory;
+        next();
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: 'Error validating default category',
+            error: error.message,
+        });
+    }
+};
+
+export const confirmAction = (req, res, next) => {
+    const { confirmDeletion } = req.body;
+
+    if (confirmDeletion !== true) {
+        return res.status(400).json({
+            success: false,
+            msg: 'Action not confirmed.'
+        });
+    }
+
+    next();
+};

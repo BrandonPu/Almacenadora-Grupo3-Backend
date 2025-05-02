@@ -1,6 +1,5 @@
 import  Product from '../products/product.model.js';
 import Category from '../categories/category.model.js';
-import Supplier from '../supplier/supplier.model.js';
 
 
 export const existProductPerName = async (req, res, next) => {
@@ -9,7 +8,7 @@ export const existProductPerName = async (req, res, next) => {
 
     try {
 
-        const existingProduct = await Product.findOne({ nameProduct: nameProduct.trim() });
+        const existingProduct = await Product.findOne({ nameProduct: nameProduct.trim().toLowerCase() });
 
         if (existingProduct) {
             return res.status(400).json({
@@ -28,40 +27,6 @@ export const existProductPerName = async (req, res, next) => {
         });
     }
 }
-
-export const validarNombreProductoUnico = async (req, res, next) => {
-    try {
-        const { nameProduct } = req.body;
-
-        if (!nameProduct || typeof nameProduct !== 'string') {
-            return res.status(400).json({
-                success: false,
-                msg: 'The product name is required.',
-            });
-        }
-
-        const productoExistente = await Product.findOne({
-            nameProduct: nameProduct.trim(),
-            state: true
-        });
-
-        if (productoExistente) {
-            return res.status(400).json({
-                success: false,
-                msg: `the name"${nameProduct}"already exists in the database.`,
-            });
-        }
-
-        next();
-
-    } catch (error) {
-        res.status(500).json({
-            success: false,
-            msg: 'there was an error.',
-            error: error.message,
-        });
-    }
-};
 
 export const validarCategoriaExistente = async (req, res, next) => {
     try {
@@ -93,3 +58,95 @@ export const validarCategoriaExistente = async (req, res, next) => {
     }
 };
 
+export const validateStockAndPrice = (req, res, next) => {
+    const { stock, price } = req.body;
+
+    if (stock < 1) {
+        return res.status(400).json({
+            success: false,
+            msg: 'Stock must be at least 1.'
+        });
+    }
+
+    if (price < 1) {
+        return res.status(400).json({
+            success: false,
+            msg: 'Price must be at least 1.'
+        });
+    }
+
+    next();
+};
+
+export const validateProductExists = async (req, res, next) => {
+    const { id } = req.params;
+
+    try {
+        const product = await Product.findById(id);
+
+        if (!product || !product.state) {
+            return res.status(404).json({
+                success: false,
+                msg: 'Product not found.'
+            });
+        }
+
+        req.product = product;
+        next();
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            msg: 'Error validating product existence.',
+            error: error.message
+        });
+    }
+};
+
+export const validateQuantityPositive = (req, res, next) => {
+    const { quantity } = req.body;
+
+    if (quantity < 1) {
+        return res.status(400).json({
+            success: false,
+            msg: 'Quantity must be at least 1.'
+        });
+    }
+
+    next();
+};
+
+export const confirmAction = (req, res, next) => {
+    const { confirmDeletion } = req.body;
+
+    if (confirmDeletion !== true) {
+        return res.status(400).json({
+            success: false,
+            msg: 'Action not confirmed.'
+        });
+    }
+
+    next();
+};
+
+export const validateQueryParams = (req, res, next) => {
+    const { nameProduct, entryDate, keeperCategory } = req.query;
+    const query = { state: true };
+
+    if (nameProduct) {
+        query.nameProduct = { $regex: new RegExp(nameProduct, 'i') };
+    }
+
+    if (entryDate) {
+        const start = new Date(entryDate);
+        const end = new Date(entryDate);
+        end.setHours(23, 59, 59, 999);
+        query.entryDate = { $gte: start, $lte: end };
+    }
+
+    if (keeperCategory) {
+        query.keeperCategory = keeperCategory;
+    }
+
+    req.productQuery = query;
+    next();
+};

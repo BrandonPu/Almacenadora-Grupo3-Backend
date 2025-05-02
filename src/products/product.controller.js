@@ -40,27 +40,10 @@ export const addProduct = async (req, res) => {
 };
 
 export const productView = async (req, res) => {
-    const {limite = 100, desde = 0, nameProduct, entryDate, keeperCategory} = req.query;
-    const query = {state: true};
+    const {limite = 100, desde = 0} = req.query;
+    const query = req.productQuery;
 
     try {
-
-        if (nameProduct){
-            query.nameProduct = {$regex: new RegExp(nameProduct, 'i')}
-        }
-
-        if (entryDate) {
-            const start = new Date(entryDate);
-            const end = new Date(entryDate);
-            end.setHours(23, 59, 59, 999);
-
-            query.entryDate = { $gte: start, $lte: end };
-        }
-
-        if (keeperCategory) {
-            query.keeperCategory = keeperCategory;
-        }
-
         
         const product = await Product.find(query)
             .populate({path: 'keeperCategory', match: {state:true}, select: 'nameCategory'})
@@ -127,15 +110,8 @@ export const productExpiringSoon = async (req, res) => {
 
 export const deleteProduct = async (req, res) => {
     const { id } = req.params;
-    const { confirmDeletion } = req.body;
 
     try {
-        if (!confirmDeletion) {
-            return res.status(400).json({
-                success: false,
-                msg: 'Please confirm the deletion action'
-            });
-        }
 
         await Product.findByIdAndUpdate(id, { state: false });
 

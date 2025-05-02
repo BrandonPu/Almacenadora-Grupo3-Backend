@@ -16,7 +16,15 @@ import {
     mostActiveProducts,
     monthlyActivityStats 
 } from "./product.controller.js";
-import { existProductPerName, validarNombreProductoUnico, validarCategoriaExistente  } from "../middlewares/validar-products.js";
+import { 
+    existProductPerName, 
+    validarCategoriaExistente ,
+    validateProductExists,
+    validateStockAndPrice,
+    validateQuantityPositive,
+    confirmAction,
+    validateQueryParams
+} from "../middlewares/validar-products.js";
 
 const router = Router();
 
@@ -24,14 +32,15 @@ router.post(
     '/addProduct',
     [
         existProductPerName,
-        validarNombreProductoUnico,
-        validarCategoriaExistente
+        validarCategoriaExistente,
+        validateStockAndPrice,
     ],
     addProduct
 );
 
 router.get(
     '/productView',
+    validateQueryParams,
     productView
 );
 
@@ -45,6 +54,8 @@ router.delete(
     [
         validarJWT,
         tieneRole("ADMIN_ROLE"),
+        validateProductExists,
+        confirmAction,
         check("id", "No es un Id válido").isMongoId()
     ],
     deleteProduct
@@ -55,6 +66,9 @@ router.put(
     [
         validarJWT,
         tieneRole("ADMIN_ROLE"),
+        validateProductExists,
+        validarCategoriaExistente,
+        validateStockAndPrice,
         check("id", "No es un Id válido").isMongoId()
     ],
     updateProduct
@@ -64,6 +78,7 @@ router.put(
     '/productEntryRegistration/:id',
     [
         validarJWT,
+        validateQuantityPositive,
         check("id", "No es un Id válido").isMongoId()
     ],
     productEntryRegistration
@@ -78,6 +93,8 @@ router.post(
     '/productExitRegistration/:id',
     [
         validarJWT,
+        validateProductExists,
+        validateQuantityPositive,
         check("id", "No es un Id válido").isMongoId()
     ],
     productExitRegistration

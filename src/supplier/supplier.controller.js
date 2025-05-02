@@ -11,8 +11,8 @@ export const addSupplier = async (req, res = response) => {
 
         const supplier = new Supplier({
             nameSupplier: data.nameSupplier,
-            productSupplier: data.productSupplier,
             emailSupplier: data.emailSupplier,
+            phoneNumber: data.phoneNumber,
             keeperProduct: product._id
         });
 

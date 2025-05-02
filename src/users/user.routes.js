@@ -5,15 +5,26 @@ import {existeUsuarioById} from '../helpers/db.validator.js';
 import {validarCampos} from '../middlewares/validar-campos.js';
 import { tieneRole } from "../middlewares/validar-roles.js";
 
-import { updateUser, updatePassword, deleteUser, updateRole} from './user.controller.js';
+import {
+    preventEmailOrPasswordUpdate, 
+    validateOldPassword, 
+    confirmDeletionMiddleware, 
+    validateUserExists, 
+    validateUserRole 
+} from '../middlewares/validar-users.js';
+
+import { usersView, updateUser, updatePassword, deleteUser, updateRole } from './user.controller.js';
 
 
 const router = Router();
 
+router.get( "/usersView", usersView);
 
 router.put(
-    "/:id",
+    "/updateUser",
     [
+        validarJWT,
+        preventEmailOrPasswordUpdate,
         check("id", "No es un Id valido").isMongoId(),
         check("id").custom(existeUsuarioById),
         validarCampos
@@ -22,8 +33,10 @@ router.put(
 );
 
 router.put(
-    "/passwordUpdate/:id",
+    "/passwordUpdate",
     [
+        validarJWT,
+        validateOldPassword,
         check("id", "No es un Id válido").isMongoId(),
         check("id").custom(existeUsuarioById),
         validarCampos
@@ -36,6 +49,7 @@ router.delete(
     [
         validarJWT,
         tieneRole("ADMIN_ROLE"),
+        confirmDeletionMiddleware,
         check("id", "No es un Id válido").isMongoId(),
         check("id").custom(existeUsuarioById),
         validarCampos
@@ -48,6 +62,8 @@ router.put(
     [   
         validarJWT,
         tieneRole("ADMIN_ROLE"),
+        validateUserExists,
+        validateUserRole,
         check("id", "No es un Id válido").isMongoId(),
         check("id").custom(existeUsuarioById),
         validarCampos

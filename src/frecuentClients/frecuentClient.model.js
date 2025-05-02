@@ -1,12 +1,17 @@
-import { Schema, model } from "mongoose";
+import {Schema, model} from "mongoose";
 
-const SupplierSchema = Schema({
-    nameSupplier : {
+const FrecuentClientSchema = Schema({
+    name : {
         type: String,
         required: [true, 'Name required'],
         maxLength: [25, 'Cant be overcome 25 characters']
     },
-    emailSupplier : {
+    surname : {
+        type: String,
+        required: [true, 'Surname required'],
+        maxLength: [25, 'Cant be overcome 25 characters']
+    },
+    email: {
         type: String,
         required: [true, 'Email required'],
         unique: true
@@ -16,19 +21,15 @@ const SupplierSchema = Schema({
         required: [true, 'Phone number required'],
         unique: true
     },
-    keeperProduct: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Product',
-        required: false
-    }],
     state: {
         type: Boolean,
         default: true
-    } 
+    }
 },
-{
-    timestamps: true,
-    versionKey: false,
-});
+    {
+        timestamps: true,
+        versionKey: false,
+    }
+);
 
-export default model('Supplier', SupplierSchema);
+export default model('FrecuentClient', FrecuentClientSchema);
