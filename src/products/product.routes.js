@@ -23,7 +23,8 @@ import {
     validateStockAndPrice,
     validateQuantityPositive,
     confirmAction,
-    validateQueryParams
+    validateQueryParams,
+    validateProductStockForExit
 } from "../middlewares/validar-products.js";
 
 const router = Router();
@@ -95,6 +96,7 @@ router.post(
         validarJWT,
         validateProductExists,
         validateQuantityPositive,
+        validateProductStockForExit,
         check("id", "No es un Id válido").isMongoId()
     ],
     productExitRegistration

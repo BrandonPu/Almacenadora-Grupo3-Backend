@@ -150,3 +150,41 @@ export const validateQueryParams = (req, res, next) => {
     req.productQuery = query;
     next();
 };
+
+export const validateProductStockForExit = async (req, res, next) => {
+    try {
+        const { id } = req.params;
+        const { quantity } = req.body;
+
+        const product = await Product.findById(id);
+
+        if (!product) {
+            return res.status(404).json({
+                success: false,
+                msg: 'Product not found'
+            });
+        }
+
+        if (product.stock <= 0) {
+            return res.status(400).json({
+                success: false,
+                msg: 'Product stock is 0 — no more exits allowed'
+            });
+        }
+
+        if (quantity > product.stock) {
+            return res.status(400).json({
+                success: false,
+                msg: `Requested quantity (${quantity}) exceeds current stock (${product.stock})`
+            });
+        }
+
+        next();
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            msg: 'Error validating product stock',
+            error: error.message
+        });
+    }
+};
