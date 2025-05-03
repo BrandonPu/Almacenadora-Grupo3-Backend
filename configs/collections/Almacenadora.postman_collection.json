@@ -276,19 +276,19 @@
 					"response": []
 				},
 				{
-					"name": "ExitProductClient",
+					"name": "ExitProduct",
 					"request": {
 						"method": "POST",
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYyNTMxOTUsImV4cCI6MTc0NjI1Njc5NX0.nfHvgLe0yurd1MviNBiLuVWgF_QUpVepRlzBLjs2hiM",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYyOTUzMTQsImV4cCI6MTc0NjI5ODkxNH0.a95BrNLWEOzc6umZuFHZtOS3HBSC7dEIoUTY2wwZvKE",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"quantity\": 2,\r\n    \"reason\": \"Porque lo necesitan\",\r\n    \"destination\": \"Peten\",\r\n    \"name\": \"Jaime\"\r\n}",
+							"raw": "{\r\n    \"clientType\": \"client\",\r\n    \"quantity\": 2,\r\n    \"reason\": \"Porque lo necesitan\",\r\n    \"destination\": \"Peten\",\r\n    \"email\": \"jajcu@gmail.com\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -296,7 +296,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3001/almacenadora/v1/products/productExitRegistrationClient/6814050a197d2a056df49281",
+							"raw": "http://localhost:3001/almacenadora/v1/products/productExitRegistration/6814050a197d2a056df49281",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -306,45 +306,7 @@
 								"almacenadora",
 								"v1",
 								"products",
-								"productExitRegistrationClient",
-								"6814050a197d2a056df49281"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "ExitProductFrecuentClient",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYyNTMxOTUsImV4cCI6MTc0NjI1Njc5NX0.nfHvgLe0yurd1MviNBiLuVWgF_QUpVepRlzBLjs2hiM",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"quantity\": 2,\r\n    \"reason\": \"Porque lo necesitan\",\r\n    \"destination\": \"Peten\",\r\n    \"name\": \"Jaime\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3001/almacenadora/v1/products/productExitRegistrationFrecuentClient/6814050a197d2a056df49281",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3001",
-							"path": [
-								"almacenadora",
-								"v1",
-								"products",
-								"productExitRegistrationFrecuentClient",
+								"productExitRegistration",
 								"6814050a197d2a056df49281"
 							]
 						}
@@ -945,13 +907,13 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYyNTMxOTUsImV4cCI6MTc0NjI1Njc5NX0.nfHvgLe0yurd1MviNBiLuVWgF_QUpVepRlzBLjs2hiM",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYyOTUzMTQsImV4cCI6MTc0NjI5ODkxNH0.a95BrNLWEOzc6umZuFHZtOS3HBSC7dEIoUTY2wwZvKE",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Jeremy\",\r\n    \"surname\": \"Arevalo\",\r\n    \"email\": \"jarevalo@gmail.com\",\r\n    \"phoneNumber\": \"12345678\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Jose\",\r\n    \"surname\": \"Ajcu\",\r\n    \"email\": \"jajcu@gmail.com\",\r\n    \"phoneNumber\": \"12345666\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

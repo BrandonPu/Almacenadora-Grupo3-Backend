@@ -10,8 +10,7 @@ import {
     updateProduct, 
     productEntryRegistration, 
     historyProductView, 
-    productExitRegistrationClient,
-    productExitRegistrationFrecuentClient,
+    productExitRegistration,
     productExpiringSoon,
     getProductMovementsSummary,
     mostActiveProducts,
@@ -92,7 +91,7 @@ router.get(
 );
 
 router.post(
-    '/productExitRegistrationClient/:id',
+    '/productExitRegistration/:id',
     [
         validarJWT,
         validateProductExists,
@@ -100,20 +99,9 @@ router.post(
         validateProductStockForExit,
         check("id", "No es un Id válido").isMongoId()
     ],
-    productExitRegistrationClient
+    productExitRegistration
 );
 
-router.post(
-    '/productExitRegistrationFrecuentClient/:id',
-    [
-        validarJWT,
-        validateProductExists,
-        validateQuantityPositive,
-        validateProductStockForExit,
-        check("id", "No es un Id válido").isMongoId()
-    ],
-    productExitRegistrationFrecuentClient
-);
 
 router.get(
     '/productMovementsSummary',

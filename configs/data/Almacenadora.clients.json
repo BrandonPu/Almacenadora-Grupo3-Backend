@@ -58,11 +58,35 @@
   "email": "jarevalo@gmail.com",
   "phoneNumber": "12345678",
   "keeperExistProductRecord": [],
-  "state": true,
+  "state": false,
   "createdAt": {
     "$date": "2025-05-03T06:44:36.701Z"
   },
   "updatedAt": {
-    "$date": "2025-05-03T06:44:36.701Z"
+    "$date": "2025-05-03T06:56:22.135Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "68165a6829c16f8e0bde84b7"
+  },
+  "name": "Jose",
+  "surname": "Ajcu",
+  "email": "jajcu@gmail.com",
+  "phoneNumber": "12345666",
+  "keeperExistProductRecord": [
+    {
+      "$oid": "68165ae230ea124d2990459a"
+    },
+    {
+      "$oid": "68165b0930ea124d29904646"
+    }
+  ],
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-03T18:03:20.127Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-03T18:06:01.114Z"
   }
 }]
