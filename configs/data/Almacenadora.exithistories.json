@@ -1,125 +1,517 @@
 [{
   "_id": {
-    "$oid": "68127bb85b5e87d76c4280db"
+    "$oid": "6812fd73d7d7642c3f6a656d"
   },
   "keeperUser": {
-    "$oid": "6812750bf1005d4877b1099a"
+    "$oid": "6810481e17449a0c7c9f3cdc"
   },
   "date": {
-    "$date": "2025-04-30T19:36:24.181Z"
+    "$date": "2025-06-01T04:49:55.766Z"
   },
-  "quantity": 2,
-  "reason": "porque si",
-  "destination": "peten",
+  "quantity": 1,
+  "reason": "Porque lo necesitan",
+  "destination": "Peten",
   "productId": {
-    "$oid": "68106b9fc8beb5c7a23cee10"
+    "$oid": "6812f5e73f9656edf1aa2879"
   },
   "state": true,
   "createdAt": {
-    "$date": "2025-04-30T19:36:24.185Z"
+    "$date": "2025-05-01T04:49:55.769Z"
   },
   "updatedAt": {
-    "$date": "2025-04-30T19:36:24.185Z"
+    "$date": "2025-05-01T04:49:55.769Z"
   },
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "68127db3357076615afcde70"
+    "$oid": "681305d397071819ff50c342"
   },
   "keeperUser": {
-    "$oid": "6812750bf1005d4877b1099a"
+    "$oid": "6810481e17449a0c7c9f3cdc"
   },
   "date": {
-    "$date": "2025-04-30T19:44:51.061Z"
+    "$date": "2025-05-01T05:25:39.178Z"
   },
-  "quantity": 2,
-  "reason": "porque si",
-  "destination": "peten",
+  "quantity": 1,
+  "reason": "Porque lo necesitan",
+  "destination": "Peten",
   "productId": {
-    "$oid": "68106b9fc8beb5c7a23cee10"
+    "$oid": "6812f5e73f9656edf1aa2879"
   },
   "state": true,
   "createdAt": {
-    "$date": "2025-04-30T19:44:51.065Z"
+    "$date": "2025-05-01T05:25:39.181Z"
   },
   "updatedAt": {
-    "$date": "2025-04-30T19:44:51.065Z"
+    "$date": "2025-05-01T05:25:39.181Z"
   },
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "681299a5b20175fb2b669a7c"
+    "$oid": "681305d497071819ff50c34d"
   },
   "keeperUser": {
-    "$oid": "6812750bf1005d4877b1099a"
+    "$oid": "6810481e17449a0c7c9f3cdc"
   },
   "date": {
-    "$date": "2025-04-30T21:44:05.660Z"
+    "$date": "2025-05-01T05:25:40.484Z"
   },
-  "quantity": 2,
-  "reason": "porque si",
-  "destination": "peten",
+  "quantity": 1,
+  "reason": "Porque lo necesitan",
+  "destination": "Peten",
   "productId": {
-    "$oid": "681060636762e7ad0af1e97c"
+    "$oid": "6812f5e73f9656edf1aa2879"
   },
   "state": true,
   "createdAt": {
-    "$date": "2025-04-30T21:44:05.663Z"
+    "$date": "2025-05-01T05:25:40.484Z"
   },
   "updatedAt": {
-    "$date": "2025-04-30T21:44:05.663Z"
+    "$date": "2025-05-01T05:25:40.484Z"
   },
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "681299c6b20175fb2b669a86"
+    "$oid": "68140682c81b34a0535da60d"
   },
   "keeperUser": {
-    "$oid": "6812750bf1005d4877b1099a"
+    "$oid": "6810481e17449a0c7c9f3cdc"
   },
   "date": {
-    "$date": "2025-04-30T21:44:38.793Z"
+    "$date": "2025-05-01T23:40:50.142Z"
   },
   "quantity": 2,
-  "reason": "porque si",
-  "destination": "peten",
+  "reason": "Porque lo necesitan",
+  "destination": "Peten",
   "productId": {
-    "$oid": "681077246a6393b97ff741b4"
+    "$oid": "6812f17a1ee7cc9dd64f4915"
   },
   "state": true,
   "createdAt": {
-    "$date": "2025-04-30T21:44:38.794Z"
+    "$date": "2025-05-01T23:40:50.143Z"
   },
   "updatedAt": {
-    "$date": "2025-04-30T21:44:38.794Z"
+    "$date": "2025-05-01T23:40:50.143Z"
   },
   "__v": 0
 },
 {
   "_id": {
-    "$oid": "681299dbb20175fb2b669a93"
+    "$oid": "68143deda72e1ee27aa1bb24"
   },
   "keeperUser": {
-    "$oid": "6812750bf1005d4877b1099a"
+    "$oid": "6810481e17449a0c7c9f3cdc"
   },
   "date": {
-    "$date": "2025-04-30T21:44:59.645Z"
+    "$date": "2025-05-02T03:37:17.528Z"
   },
   "quantity": 2,
-  "reason": "porque si",
-  "destination": "peten",
+  "reason": "Porque lo necesitan",
+  "destination": "Peten",
   "productId": {
-    "$oid": "681077246a6393b97ff741b4"
+    "$oid": "6812f17a1ee7cc9dd64f4915"
   },
   "state": true,
   "createdAt": {
-    "$date": "2025-04-30T21:44:59.645Z"
+    "$date": "2025-05-02T03:37:17.548Z"
   },
   "updatedAt": {
-    "$date": "2025-04-30T21:44:59.645Z"
+    "$date": "2025-05-02T03:37:17.548Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6815aa53d01f6525c4b40157"
+  },
+  "keeperUser": {
+    "$oid": "6810481e17449a0c7c9f3cdc"
+  },
+  "date": {
+    "$date": "2025-05-03T05:32:03.990Z"
+  },
+  "quantity": 2,
+  "reason": "Porque lo necesitan",
+  "destination": "Peten",
+  "productId": {
+    "$oid": "6814050a197d2a056df49281"
+  },
+  "keeperClient": {
+    "$oid": "68141d809373ee5b87264bfe"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-03T05:32:03.993Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-03T05:32:03.993Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6815ac1f70d5037f5b83f250"
+  },
+  "keeperUser": {
+    "$oid": "6810481e17449a0c7c9f3cdc"
+  },
+  "date": {
+    "$date": "2025-05-03T05:39:43.080Z"
+  },
+  "quantity": 2,
+  "reason": "Porque lo necesitan",
+  "destination": "Peten",
+  "productId": {
+    "$oid": "6814050a197d2a056df49281"
+  },
+  "keeperClient": {
+    "$oid": "68141d809373ee5b87264bfe"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-03T05:39:43.083Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-03T05:39:43.083Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6815b6762c2a0d9dcdcd15cd"
+  },
+  "keeperUser": {
+    "$oid": "6810481e17449a0c7c9f3cdc"
+  },
+  "date": {
+    "$date": "2025-05-03T06:23:50.324Z"
+  },
+  "quantity": 2,
+  "reason": "Porque lo necesitan",
+  "destination": "Peten",
+  "productId": {
+    "$oid": "6814050a197d2a056df49281"
+  },
+  "keeperClient": {
+    "$oid": "6815b5c6ad520621df283137"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-03T06:23:50.328Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-03T06:23:50.328Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6815b67c2c2a0d9dcdcd15e4"
+  },
+  "keeperUser": {
+    "$oid": "6810481e17449a0c7c9f3cdc"
+  },
+  "date": {
+    "$date": "2025-05-03T06:23:56.470Z"
+  },
+  "quantity": 2,
+  "reason": "Porque lo necesitan",
+  "destination": "Peten",
+  "productId": {
+    "$oid": "6814050a197d2a056df49281"
+  },
+  "keeperClient": {
+    "$oid": "6815b5c6ad520621df283137"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-03T06:23:56.471Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-03T06:23:56.471Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6815b67e2c2a0d9dcdcd15ff"
+  },
+  "keeperUser": {
+    "$oid": "6810481e17449a0c7c9f3cdc"
+  },
+  "date": {
+    "$date": "2025-05-03T06:23:58.067Z"
+  },
+  "quantity": 2,
+  "reason": "Porque lo necesitan",
+  "destination": "Peten",
+  "productId": {
+    "$oid": "6814050a197d2a056df49281"
+  },
+  "keeperClient": {
+    "$oid": "6815b5c6ad520621df283137"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-03T06:23:58.069Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-03T06:23:58.069Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6815b67f2c2a0d9dcdcd161e"
+  },
+  "keeperUser": {
+    "$oid": "6810481e17449a0c7c9f3cdc"
+  },
+  "date": {
+    "$date": "2025-05-03T06:23:59.414Z"
+  },
+  "quantity": 2,
+  "reason": "Porque lo necesitan",
+  "destination": "Peten",
+  "productId": {
+    "$oid": "6814050a197d2a056df49281"
+  },
+  "keeperClient": {
+    "$oid": "6815b5c6ad520621df283137"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-03T06:23:59.415Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-03T06:23:59.415Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6815b6802c2a0d9dcdcd1641"
+  },
+  "keeperUser": {
+    "$oid": "6810481e17449a0c7c9f3cdc"
+  },
+  "date": {
+    "$date": "2025-05-03T06:24:00.517Z"
+  },
+  "quantity": 2,
+  "reason": "Porque lo necesitan",
+  "destination": "Peten",
+  "productId": {
+    "$oid": "6814050a197d2a056df49281"
+  },
+  "keeperClient": {
+    "$oid": "6815b5c6ad520621df283137"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-03T06:24:00.518Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-03T06:24:00.518Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6815b6812c2a0d9dcdcd1668"
+  },
+  "keeperUser": {
+    "$oid": "6810481e17449a0c7c9f3cdc"
+  },
+  "date": {
+    "$date": "2025-05-03T06:24:01.392Z"
+  },
+  "quantity": 2,
+  "reason": "Porque lo necesitan",
+  "destination": "Peten",
+  "productId": {
+    "$oid": "6814050a197d2a056df49281"
+  },
+  "keeperClient": {
+    "$oid": "6815b5c6ad520621df283137"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-03T06:24:01.392Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-03T06:24:01.392Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6815b6822c2a0d9dcdcd1693"
+  },
+  "keeperUser": {
+    "$oid": "6810481e17449a0c7c9f3cdc"
+  },
+  "date": {
+    "$date": "2025-05-03T06:24:02.245Z"
+  },
+  "quantity": 2,
+  "reason": "Porque lo necesitan",
+  "destination": "Peten",
+  "productId": {
+    "$oid": "6814050a197d2a056df49281"
+  },
+  "keeperClient": {
+    "$oid": "6815b5c6ad520621df283137"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-03T06:24:02.245Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-03T06:24:02.245Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6815b6832c2a0d9dcdcd16c2"
+  },
+  "keeperUser": {
+    "$oid": "6810481e17449a0c7c9f3cdc"
+  },
+  "date": {
+    "$date": "2025-05-03T06:24:03.230Z"
+  },
+  "quantity": 2,
+  "reason": "Porque lo necesitan",
+  "destination": "Peten",
+  "productId": {
+    "$oid": "6814050a197d2a056df49281"
+  },
+  "keeperClient": {
+    "$oid": "6815b5c6ad520621df283137"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-03T06:24:03.230Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-03T06:24:03.230Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6815b6842c2a0d9dcdcd16f5"
+  },
+  "keeperUser": {
+    "$oid": "6810481e17449a0c7c9f3cdc"
+  },
+  "date": {
+    "$date": "2025-05-03T06:24:04.352Z"
+  },
+  "quantity": 2,
+  "reason": "Porque lo necesitan",
+  "destination": "Peten",
+  "productId": {
+    "$oid": "6814050a197d2a056df49281"
+  },
+  "keeperClient": {
+    "$oid": "6815b5c6ad520621df283137"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-03T06:24:04.352Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-03T06:24:04.352Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6815b6852c2a0d9dcdcd172c"
+  },
+  "keeperUser": {
+    "$oid": "6810481e17449a0c7c9f3cdc"
+  },
+  "date": {
+    "$date": "2025-05-03T06:24:05.406Z"
+  },
+  "quantity": 2,
+  "reason": "Porque lo necesitan",
+  "destination": "Peten",
+  "productId": {
+    "$oid": "6814050a197d2a056df49281"
+  },
+  "keeperClient": {
+    "$oid": "6815b5c6ad520621df283137"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-03T06:24:05.407Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-03T06:24:05.407Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6815b6982c2a0d9dcdcd176b"
+  },
+  "keeperUser": {
+    "$oid": "6810481e17449a0c7c9f3cdc"
+  },
+  "date": {
+    "$date": "2025-05-03T06:24:24.790Z"
+  },
+  "quantity": 2,
+  "reason": "Porque lo necesitan",
+  "destination": "Peten",
+  "productId": {
+    "$oid": "6814050a197d2a056df49281"
+  },
+  "keeperClient": {
+    "$oid": "6815b5c6ad520621df283137"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-03T06:24:24.791Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-03T06:24:24.791Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6815b7ce5c4f26724b16bf95"
+  },
+  "keeperUser": {
+    "$oid": "6810481e17449a0c7c9f3cdc"
+  },
+  "date": {
+    "$date": "2025-05-03T06:29:34.899Z"
+  },
+  "quantity": 2,
+  "reason": "Porque lo necesitan",
+  "destination": "Peten",
+  "productId": {
+    "$oid": "6814050a197d2a056df49281"
+  },
+  "keeperFrecuentClient": {
+    "$oid": "6815b69c2c2a0d9dcdcd1780"
+  },
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-03T06:29:34.903Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-03T06:29:34.903Z"
   },
   "__v": 0
 }]

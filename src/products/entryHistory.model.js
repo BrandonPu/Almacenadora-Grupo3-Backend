@@ -23,4 +23,4 @@ const entryHistorySchema = new Schema({
     versionkey: false
 });
 
-export default model('entryHistory', entryHistorySchema)
+export default model('EntryHistory', entryHistorySchema)

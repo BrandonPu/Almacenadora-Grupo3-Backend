@@ -25,7 +25,18 @@ const exitHistorySchema = new Schema({
     productId: { 
         type: Schema.Types.ObjectId, 
         ref: 'Product', 
-        required: false },
+        required: false 
+    },
+    keeperClient: {
+        type: Schema.Types.ObjectId, 
+        ref: 'Client', 
+        required: false 
+    },
+    keeperFrecuentClient: {
+        type: Schema.Types.ObjectId, 
+        ref: 'FrecuentClient', 
+        required: false 
+    },
     state: {
         type: Boolean,
         default: true
@@ -36,4 +47,4 @@ const exitHistorySchema = new Schema({
     versionkey: false
 });
 
-export default model('exitHistory', exitHistorySchema)
+export default model('ExitHistory', exitHistorySchema)

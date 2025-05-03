@@ -1,0 +1,68 @@
+[{
+  "_id": {
+    "$oid": "6815b5c6ad520621df283137"
+  },
+  "name": "Jaime",
+  "surname": "Reyes",
+  "email": "jarore09@gmail.com",
+  "phoneNumber": "12345677",
+  "keeperExistProductRecord": [
+    {
+      "$oid": "6815b6762c2a0d9dcdcd15cd"
+    },
+    {
+      "$oid": "6815b67c2c2a0d9dcdcd15e4"
+    },
+    {
+      "$oid": "6815b67e2c2a0d9dcdcd15ff"
+    },
+    {
+      "$oid": "6815b67f2c2a0d9dcdcd161e"
+    },
+    {
+      "$oid": "6815b6802c2a0d9dcdcd1641"
+    },
+    {
+      "$oid": "6815b6812c2a0d9dcdcd1668"
+    },
+    {
+      "$oid": "6815b6822c2a0d9dcdcd1693"
+    },
+    {
+      "$oid": "6815b6832c2a0d9dcdcd16c2"
+    },
+    {
+      "$oid": "6815b6842c2a0d9dcdcd16f5"
+    },
+    {
+      "$oid": "6815b6852c2a0d9dcdcd172c"
+    },
+    {
+      "$oid": "6815b6982c2a0d9dcdcd176b"
+    }
+  ],
+  "state": false,
+  "createdAt": {
+    "$date": "2025-05-03T06:20:54.057Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-03T06:44:02.760Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6815bb54eb4430b06da702c9"
+  },
+  "name": "Jeremy",
+  "surname": "Arevalo",
+  "email": "jarevalo@gmail.com",
+  "phoneNumber": "12345678",
+  "keeperExistProductRecord": [],
+  "state": true,
+  "createdAt": {
+    "$date": "2025-05-03T06:44:36.701Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-03T06:44:36.701Z"
+  }
+}]

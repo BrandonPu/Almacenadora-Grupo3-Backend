@@ -1,6 +1,6 @@
 import {Schema, model} from "mongoose";
 
-const FrecuentClientSchema = Schema({
+const ClientSchema = Schema({
     name : {
         type: String,
         required: [true, 'Name required'],
@@ -37,4 +37,4 @@ const FrecuentClientSchema = Schema({
     }
 );
 
-export default model('FrecuentClient', FrecuentClientSchema);
+export default model('Client', ClientSchema);

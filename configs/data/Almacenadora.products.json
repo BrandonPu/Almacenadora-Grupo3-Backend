@@ -4,11 +4,11 @@
   },
   "nameProduct": "Seven",
   "description": "Bebida gaseosa",
-  "stock": 14,
+  "stock": 20,
   "keeperCategory": {
-    "$oid": "681078faf62b2518b9e51aea"
+    "$oid": "681075bc34a881de343031c7"
   },
-  "price": 7,
+  "price": 20,
   "entryDate": {
     "$date": "2018-01-10T00:00:00.000Z"
   },
@@ -16,7 +16,32 @@
     "$date": "2025-08-01T00:00:00.000Z"
   },
   "state": true,
-  "purchaseRecord": [],
+  "purchaseRecord": [
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-05-01T23:40:50.140Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "68140682c81b34a0535da608"
+      }
+    },
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-05-02T03:37:17.483Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "68143deda72e1ee27aa1bb1e"
+      }
+    }
+  ],
   "registrationEntryRecord": [
     {
       "quantity": 5,
@@ -29,13 +54,25 @@
       "_id": {
         "$oid": "6812fb4c454b6f8f51ec970c"
       }
+    },
+    {
+      "quantity": 10,
+      "date": {
+        "$date": "2025-05-01T23:40:06.632Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "68140656c81b34a0535da5f9"
+      }
     }
   ],
   "createdAt": {
     "$date": "2025-05-01T03:58:50.089Z"
   },
   "updatedAt": {
-    "$date": "2025-05-01T20:19:12.661Z"
+    "$date": "2025-05-02T03:37:17.568Z"
   },
   "keeperSupplier": [
     {
@@ -183,4 +220,232 @@
       "$oid": "6813d771734d69260d9e627e"
     }
   ]
+},
+{
+  "_id": {
+    "$oid": "6814050a197d2a056df49281"
+  },
+  "nameProduct": "Atun en lata",
+  "description": "Aatun en trozos enlatado",
+  "stock": 76,
+  "keeperCategory": {
+    "$oid": "681075bc34a881de343031c7"
+  },
+  "keeperSupplier": [
+    {
+      "$oid": "68140f61b058198380d43bc9"
+    },
+    {
+      "$oid": "6814101ed6b097166052841e"
+    }
+  ],
+  "price": 15,
+  "entryDate": {
+    "$date": "2025-05-01T00:00:00.000Z"
+  },
+  "expirationDate": {
+    "$date": "2030-01-01T00:00:00.000Z"
+  },
+  "state": true,
+  "purchaseRecord": [
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-05-03T05:32:03.973Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "6815aa53d01f6525c4b40153"
+      }
+    },
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-05-03T05:39:43.068Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "6815ac1f70d5037f5b83f24b"
+      }
+    },
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-05-03T06:23:50.312Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "6815b6762c2a0d9dcdcd15c7"
+      }
+    },
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-05-03T06:23:56.461Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "6815b67c2c2a0d9dcdcd15dd"
+      }
+    },
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-05-03T06:23:58.060Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "6815b67e2c2a0d9dcdcd15f7"
+      }
+    },
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-05-03T06:23:59.408Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "6815b67f2c2a0d9dcdcd1615"
+      }
+    },
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-05-03T06:24:00.511Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "6815b6802c2a0d9dcdcd1637"
+      }
+    },
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-05-03T06:24:01.387Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "6815b6812c2a0d9dcdcd165d"
+      }
+    },
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-05-03T06:24:02.241Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "6815b6822c2a0d9dcdcd1687"
+      }
+    },
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-05-03T06:24:03.226Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "6815b6832c2a0d9dcdcd16b5"
+      }
+    },
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-05-03T06:24:04.348Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "6815b6842c2a0d9dcdcd16e7"
+      }
+    },
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-05-03T06:24:05.400Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "6815b6852c2a0d9dcdcd171d"
+      }
+    },
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-05-03T06:24:24.787Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "6815b6982c2a0d9dcdcd175b"
+      }
+    },
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-05-03T06:28:53.704Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "6815b7a52c2a0d9dcdcd17a4"
+      }
+    },
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-05-03T06:29:21.852Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "6815b7c1a8ce9e07556929e1"
+      }
+    },
+    {
+      "quantity": 2,
+      "date": {
+        "$date": "2025-05-03T06:29:34.889Z"
+      },
+      "user": {
+        "$oid": "6810481e17449a0c7c9f3cdc"
+      },
+      "_id": {
+        "$oid": "6815b7ce5c4f26724b16bf82"
+      }
+    }
+  ],
+  "registrationEntryRecord": [],
+  "createdAt": {
+    "$date": "2025-05-01T23:34:34.191Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-03T06:29:34.907Z"
+  }
 }]

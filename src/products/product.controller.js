@@ -2,6 +2,8 @@ import { response } from "express";
 import Product from './product.model.js';
 import Category from '../categories/category.model.js';
 import Supplier from '../supplier/supplier.model.js';
+import FrecuentClient from '../frecuentClients/frecuentClient.model.js';
+import Client from '../frecuentClients/client.model.js'
 
 import EntryHistory from "./entryHistory.model.js";
 import ExitHistory from "./exitHistory.model.js"
@@ -248,7 +250,7 @@ export const historyProductView = async (req, res) => {
 };
 
 
-export const productExitRegistration = async (req, res = response) => {
+export const productExitRegistrationClient = async (req, res = response) => {
     try {
         const { id } = req.params;
         const data = req.body;
@@ -266,16 +268,75 @@ export const productExitRegistration = async (req, res = response) => {
         
         );
 
+        const client = await Client.findOne({ name: data.name });
+
         const history = await ExitHistory.create({
                 keeperUser: userId ,
                 date: new Date(), 
                 quantity: data.quantity,
                 reason: data.reason,
                 destination: data.destination,
+                keeperClient: client._id,
                 productId: id
         });
 
         await Product.findByIdAndUpdate(id, {$inc: { stock: -data.quantity }});
+
+        await Client.findByIdAndUpdate(client._id, {
+            $push: { keeperExistProductRecord: history._id}
+        });
+
+        res.status(200).json({
+            success: true,
+            msg: 'Product exit registered',
+            product,
+            history
+        });
+
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            msg: "Error processing product exit",
+            error: error.message
+        });
+    }
+};
+
+export const productExitRegistrationFrecuentClient = async (req, res = response) => {
+    try {
+        const { id } = req.params;
+        const data = req.body;
+        const userId = req.usuario._id;
+
+        const product = await Product.findByIdAndUpdate(
+            
+            id,
+            {
+                $push: { purchaseRecord: { quantity: data.quantity, date: new Date(), user: userId } },
+                ...data,
+                state: true
+            },
+            { new: true }
+        
+        );
+
+        const frecuentClient = await FrecuentClient.findOne({ name: data.name });
+
+        const history = await ExitHistory.create({
+                keeperUser: userId ,
+                date: new Date(), 
+                quantity: data.quantity,
+                reason: data.reason,
+                destination: data.destination,
+                keeperFrecuentClient: frecuentClient._id,
+                productId: id
+        });
+
+        await Product.findByIdAndUpdate(id, {$inc: { stock: -data.quantity }});
+
+        await FrecuentClient.findByIdAndUpdate(frecuentClient._id, {
+            $push: { keeperExistProductRecord: history._id}
+        });
 
         res.status(200).json({
             success: true,

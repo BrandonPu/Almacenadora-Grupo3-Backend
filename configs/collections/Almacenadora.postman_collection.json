@@ -83,7 +83,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nameProduct\": \"Rica roja\",\r\n    \"description\": \"bebida gaseosa\",\r\n    \"stock\": 10,\r\n    \"nameCategory\": \"Bebidas\",\r\n    \"price\": 7,\r\n    \"entryDate\": \"2018-01-12\",\r\n    \"expirationDate\": \"2025-10-24\"\r\n}",
+							"raw": "{\r\n    \"nameProduct\": \"Atun en lata\",\r\n    \"description\": \"Aatun en trozos enlatado\",\r\n    \"stock\": 20,\r\n    \"nameCategory\": \"Alimentos enlatados\",\r\n    \"price\": 15,\r\n    \"entryDate\": \"2025-05-01\",\r\n    \"expirationDate\": \"2030-01-01\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -146,7 +146,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDU5MDc3MzEsImV4cCI6MTc0NTkxMTMzMX0.Pp5ab27efdJReHYo8vI9UA27LX9d46QCHIHTz1Mt2ZE",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYxNDI1NDQsImV4cCI6MTc0NjE0NjE0NH0.NurysyoEAhbEYCM-kbOuh4npQ_KPUSxPKQPB92M8Y2Q",
 								"type": "text"
 							}
 						],
@@ -160,7 +160,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3001/almacenadora/v1/products/deleteProduct/681060636762e7ad0af1e97c",
+							"raw": "http://localhost:3001/almacenadora/v1/products/deleteProduct/6814050a197d2a056df49281",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -171,7 +171,7 @@
 								"v1",
 								"products",
 								"deleteProduct",
-								"681060636762e7ad0af1e97c"
+								"6814050a197d2a056df49281"
 							]
 						}
 					},
@@ -184,13 +184,13 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYxMjY3NjgsImV4cCI6MTc0NjEzMDM2OH0.aCpdR691OkVjna0nw6yEPvFinblN2B9wo_6XPFG1PeA",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYxNDI1NDQsImV4cCI6MTc0NjE0NjE0NH0.NurysyoEAhbEYCM-kbOuh4npQ_KPUSxPKQPB92M8Y2Q",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nameProduct\": \"Seven\",\r\n    \"description\": \"Bebida gaseosa\",\r\n    \"stock\": 14,\r\n    \"price\": 7,\r\n    \"entryDate\": \"2018-01-10\",\r\n    \"expirationDate\": \"2025-08-01\",\r\n    \"nameCategory\" : \"Alimentos enlatados\"\r\n\r\n}",
+							"raw": "{\r\n    \"nameProduct\": \"Seven\",\r\n    \"description\": \"Bebida gaseosa\",\r\n    \"stock\": 20,\r\n    \"price\": 20,\r\n    \"entryDate\": \"2018-01-10\",\r\n    \"expirationDate\": \"2025-08-01\",\r\n    \"nameCategory\" : \"Alimentos enlatados\"\r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -222,13 +222,13 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYwNzM5OTgsImV4cCI6MTc0NjA3NzU5OH0.hx60Ew_N_iw7MUWdAgS44D61HAdh3a4pVthcGHep2sM",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYxNDI1NDQsImV4cCI6MTc0NjE0NjE0NH0.NurysyoEAhbEYCM-kbOuh4npQ_KPUSxPKQPB92M8Y2Q",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"quantity\": 5\r\n}",
+							"raw": "{\r\n    \"quantity\": 10\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -276,19 +276,19 @@
 					"response": []
 				},
 				{
-					"name": "ExitProduct",
+					"name": "ExitProductClient",
 					"request": {
 						"method": "POST",
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYwNzM5OTgsImV4cCI6MTc0NjA3NzU5OH0.hx60Ew_N_iw7MUWdAgS44D61HAdh3a4pVthcGHep2sM",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYyNTMxOTUsImV4cCI6MTc0NjI1Njc5NX0.nfHvgLe0yurd1MviNBiLuVWgF_QUpVepRlzBLjs2hiM",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"quantity\": 1,\r\n    \"reason\": \"Porque lo necesitan\",\r\n    \"destination\": \"Peten\"\r\n}",
+							"raw": "{\r\n    \"quantity\": 2,\r\n    \"reason\": \"Porque lo necesitan\",\r\n    \"destination\": \"Peten\",\r\n    \"name\": \"Jaime\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -296,7 +296,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3001/almacenadora/v1/products/productExitRegistration/6812f5e73f9656edf1aa2879",
+							"raw": "http://localhost:3001/almacenadora/v1/products/productExitRegistrationClient/6814050a197d2a056df49281",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -306,8 +306,46 @@
 								"almacenadora",
 								"v1",
 								"products",
-								"productExitRegistration",
-								"6812f5e73f9656edf1aa2879"
+								"productExitRegistrationClient",
+								"6814050a197d2a056df49281"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ExitProductFrecuentClient",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYyNTMxOTUsImV4cCI6MTc0NjI1Njc5NX0.nfHvgLe0yurd1MviNBiLuVWgF_QUpVepRlzBLjs2hiM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\": 2,\r\n    \"reason\": \"Porque lo necesitan\",\r\n    \"destination\": \"Peten\",\r\n    \"name\": \"Jaime\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/products/productExitRegistrationFrecuentClient/6814050a197d2a056df49281",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"products",
+								"productExitRegistrationFrecuentClient",
+								"6814050a197d2a056df49281"
 							]
 						}
 					},
@@ -453,7 +491,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDU5MDk0NjMsImV4cCI6MTc0NTkxMzA2M30.atERtE8Rvxmi1cVk2pis-j6OzoDS7dvsNimYMfIINpo",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYxNDQwNzksImV4cCI6MTc0NjE0NzY3OX0.nPVMNuTVVoNy9EOlE7TrUBQpKdePRnyF7kMIwoGIpm8",
 								"type": "text"
 							}
 						],
@@ -512,13 +550,13 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDU5MDk0NjMsImV4cCI6MTc0NTkxMzA2M30.atERtE8Rvxmi1cVk2pis-j6OzoDS7dvsNimYMfIINpo",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYxNDQwNzksImV4cCI6MTc0NjE0NzY3OX0.nPVMNuTVVoNy9EOlE7TrUBQpKdePRnyF7kMIwoGIpm8",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "",
+							"raw": "{\r\n    \"confirmDeletion\": true\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -591,13 +629,13 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYxMzAxNjIsImV4cCI6MTc0NjEzMzc2Mn0.mBy4v2T0vuyUeA9VEjfYhR0T4ohuS52_TFkWzSig878",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYxNDUwNDcsImV4cCI6MTc0NjE0ODY0N30.YdALPGFsuWrgCCFwaTkonhGN_l0Dp6gCOdtU1arrUKk",
 								"type": "text"
 							}
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nameSupplier\": \"Cristian.S.A\",\r\n    \"emailSupplier\":\"cristianSA@gmail.com\",\r\n    \"nameProduct\":\"Rica roja\"\r\n}",
+							"raw": "{\r\n    \"nameSupplier\": \"Kevin.S.A\",\r\n    \"emailSupplier\":\"kevinss@gmail.com\",\r\n    \"nameProduct\":\"Atun en lata\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -688,12 +726,21 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYwNzAxMzAsImV4cCI6MTc0NjA3MzczMH0.OI28Fx1Mx4i1NgP10TGxaAlOWSIgK03gS68F4mGWxl4",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYxNDUwNDcsImV4cCI6MTc0NjE0ODY0N30.YdALPGFsuWrgCCFwaTkonhGN_l0Dp6gCOdtU1arrUKk",
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"confirmDeletion\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://localhost:3001/almacenadora/v1/suppliers/deleteSupiler/6812eb0e6361196c1c3ea045",
+							"raw": "http://localhost:3001/almacenadora/v1/suppliers/deleteSupiler/6814101ed6b097166052841e",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -704,7 +751,7 @@
 								"v1",
 								"suppliers",
 								"deleteSupiler",
-								"6812eb0e6361196c1c3ea045"
+								"6814101ed6b097166052841e"
 							]
 						}
 					},
@@ -716,10 +763,38 @@
 			"name": "Users",
 			"item": [
 				{
+					"name": "UsersView",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/users/usersView",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"users",
+								"usersView"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "UpdateUser",
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNThiZjE1MjJlNmVjMzMwM2Y3NTkiLCJpYXQiOjE3NDYxNDcwMDcsImV4cCI6MTc0NjE1MDYwN30.VJ8Fy6JOrnxGEMSUJ944uwHlWnYZfYT999PvuYC07ok",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"name\": \"Kevin\",\r\n    \"surname\": \"Reyes\",\r\n    \"username\": \"Krayes\"\r\n}",
@@ -730,7 +805,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3001/almacenadora/v1/users/681058bf1522e6ec3303f759",
+							"raw": "http://localhost:3001/almacenadora/v1/users/updateUser",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -740,7 +815,7 @@
 								"almacenadora",
 								"v1",
 								"users",
-								"681058bf1522e6ec3303f759"
+								"updateUser"
 							]
 						}
 					},
@@ -750,10 +825,16 @@
 					"name": "PasswordUpdate",
 					"request": {
 						"method": "PUT",
-						"header": [],
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNThiZjE1MjJlNmVjMzMwM2Y3NTkiLCJpYXQiOjE3NDYxNDcwMDcsImV4cCI6MTc0NjE1MDYwN30.VJ8Fy6JOrnxGEMSUJ944uwHlWnYZfYT999PvuYC07ok",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"passwordOld\" : \"12345678\",\r\n    \"passwordNew\" : \"passwordNew\"\r\n}",
+							"raw": "{\r\n    \"passwordOld\" : \"passwordNew\",\r\n    \"passwordNew\" : \"12345678\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -761,7 +842,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3001/almacenadora/v1/users/passwordUpdate/681058bf1522e6ec3303f759",
+							"raw": "http://localhost:3001/almacenadora/v1/users/passwordUpdate",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -771,8 +852,7 @@
 								"almacenadora",
 								"v1",
 								"users",
-								"passwordUpdate",
-								"681058bf1522e6ec3303f759"
+								"passwordUpdate"
 							]
 						}
 					},
@@ -785,7 +865,7 @@
 						"header": [
 							{
 								"key": "x-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYwNzk0ODUsImV4cCI6MTc0NjA4MzA4NX0.hybJxakNuJ6Fay5DdKMjfn6fSAsqqJh9UN1FiE8pihE",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYxNDc4NTUsImV4cCI6MTc0NjE1MTQ1NX0.N17irTfppu6UecOKoY6MegY4V2ATHEYDmYf_6fsiSUA",
 								"type": "text"
 							}
 						],
@@ -811,6 +891,281 @@
 								"users",
 								"userDelete",
 								"681058bf1522e6ec3303f759"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ClientFrecuent",
+			"item": [
+				{
+					"name": "AddClientFrecuent",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYyNTMxOTUsImV4cCI6MTc0NjI1Njc5NX0.nfHvgLe0yurd1MviNBiLuVWgF_QUpVepRlzBLjs2hiM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jeremy\",\r\n    \"surname\": \"Arevalo\",\r\n    \"email\": \"jarevalo@gmail.com\",\r\n    \"phoneNumber\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/frecuentClients/addFrecuentClient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"frecuentClients",
+								"addFrecuentClient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddClient",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYyNTMxOTUsImV4cCI6MTc0NjI1Njc5NX0.nfHvgLe0yurd1MviNBiLuVWgF_QUpVepRlzBLjs2hiM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jeremy\",\r\n    \"surname\": \"Arevalo\",\r\n    \"email\": \"jarevalo@gmail.com\",\r\n    \"phoneNumber\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/frecuentClients/addClient",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"frecuentClients",
+								"addClient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "FrecuentClientView",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/frecuentClients/frecuentClientView",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"frecuentClients",
+								"frecuentClientView"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateFrecuentClient",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYxNDAwMDcsImV4cCI6MTc0NjE0MzYwN30.jY2zITyyOIv8P0Bcl8doCnDJEUFT97gKrPfBpEMBKnY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jeremy\",\r\n    \"surname\": \"Arevalo\",\r\n    \"email\": \"jarevalo@gmail.com\",\r\n    \"phoneNumber\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/frecuentClients/updateFrecuentClient/6813fbbf9d65f2ebbac81e93",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"frecuentClients",
+								"updateFrecuentClient",
+								"6813fbbf9d65f2ebbac81e93"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteFrecuentClient",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYxNDAwMDcsImV4cCI6MTc0NjE0MzYwN30.jY2zITyyOIv8P0Bcl8doCnDJEUFT97gKrPfBpEMBKnY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"confirmDeletion\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/frecuentClients/deleteFrecuentClient/6813fbbf9d65f2ebbac81e93",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"frecuentClients",
+								"deleteFrecuentClient",
+								"6813fbbf9d65f2ebbac81e93"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ViewClient",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/frecuentClients/clientView",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"frecuentClients",
+								"clientView"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateClient",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYyNTUyMzksImV4cCI6MTc0NjI1ODgzOX0.YXM-pRzajWxxHBjB_Vs49sz8esCm2XWy6uzTnTZ47O8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jeremy\",\r\n    \"surname\": \"Arevalo\",\r\n    \"email\": \"jarevalo@gmail.com\",\r\n    \"phoneNumber\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/frecuentClients/updateClient/6815bb54eb4430b06da702c9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"frecuentClients",
+								"updateClient",
+								"6815bb54eb4430b06da702c9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteClient",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2ODEwNDgxZTE3NDQ5YTBjN2M5ZjNjZGMiLCJpYXQiOjE3NDYyNTUyMzksImV4cCI6MTc0NjI1ODgzOX0.YXM-pRzajWxxHBjB_Vs49sz8esCm2XWy6uzTnTZ47O8",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"confirmDeletion\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/almacenadora/v1/frecuentClients/deleteClient/6815bb54eb4430b06da702c9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"almacenadora",
+								"v1",
+								"frecuentClients",
+								"deleteClient",
+								"6815bb54eb4430b06da702c9"
 							]
 						}
 					},
