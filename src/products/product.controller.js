@@ -55,6 +55,8 @@ export const productView = async (req, res) => {
 
         const total = await Product.countDocuments(query);
 
+        const totalStock = product.reduce((acc, item) => acc + item.stock, 0);
+
         const totalProductsValue = product.reduce((acc, item) => {
             return acc + (item.stock * item.price);
         }, 0);
@@ -62,6 +64,7 @@ export const productView = async (req, res) => {
         res.status(200).json({
             succes: true,
             total,
+            totalStock,
             totalProductsValue,
             product
         })
@@ -134,25 +137,36 @@ export const deleteProduct = async (req, res) => {
 export const updateProduct = async (req, res  = response) => {
     try {
         const {id} = req.params;
-        const {_id, ...data} = req.body;
+        const {_id, nameCategory, ...data} = req.body;
         data.state = true;
 
-        const category = await Category.findOne({ nameCategory: data.nameCategory, state: true });
+        const existingProduct = await Product.findById(id);
 
-        const product = await Product.findByIdAndUpdate(
+        const newCategory = await Category.findOne({ nameCategory, state: true });
+
+        const oldCategoryId = existingProduct.keeperCategory.toString();
+        const newCategoryId = newCategory._id.toString();
+
+        const updatedProduct = await Product.findByIdAndUpdate(
             id,
-            { ...data, keeperCategory: category._id },
+            { ...data, keeperCategory: newCategory._id },
             { new: true }
         );
 
-        await Category.findByIdAndUpdate(category._id, {
-            $push: { keeperProduct: product._id}
-        });
+        if (oldCategoryId !== newCategoryId) {
+            await Category.findByIdAndUpdate(oldCategoryId, {
+                $pull: { keeperProduct: updatedProduct._id }
+            });
+
+            await Category.findByIdAndUpdate(newCategory._id, {
+                $addToSet: { keeperProduct: updatedProduct._id }
+            });
+        }
 
         res.status(200).json({
             succes: true,
             msj: 'Product updated successfully',
-            product
+            product: updatedProduct
         })
 
     } catch (error) {
@@ -227,6 +241,8 @@ export const historyProductView = async (req, res) => {
         const productHistoryExit = await ExitHistory.find(query)
             .populate({path: 'keeperUser', match: {state:true}, select: 'name'})
             .populate({path: 'productId', match: {state:true}, select: 'nameProduct'})
+            .populate({path: 'keeperClient', match: {state:true}, select: 'email'})
+            .populate({path: 'keeperFrecuentClient', match: {state:true}, select: 'email'})
             .skip(Number(desde))
             .limit(Number(limite));
 
